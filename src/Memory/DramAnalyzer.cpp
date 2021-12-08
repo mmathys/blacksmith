@@ -2,6 +2,7 @@
 
 #include <cassert>
 #include <unordered_set>
+#include <immintrin.h>
 
 void DramAnalyzer::find_bank_conflicts() {
   size_t nr_banks_cur = 0;
@@ -121,6 +122,10 @@ size_t DramAnalyzer::count_acts_per_ref() {
   uint64_t before, after, count = 0, count_old = 0;
   (void)*a;
   (void)*b;
+  __m256 x;
+  __m256 y;
+  volatile double x1;
+  volatile double y1;
 
   auto compute_std = [](std::vector<uint64_t> &values, uint64_t running_sum, size_t num_numbers) {
     double mean = static_cast<double>(running_sum)/static_cast<double>(num_numbers);
@@ -139,9 +144,18 @@ size_t DramAnalyzer::count_acts_per_ref() {
     mfence();
     before = rdtscp();
     lfence();
-    (void)*a;
-    (void)*b;
+
+    //(void)*a;
+    //(void)*b;
+
+    x = _mm256_loadu_ps((const float *)a);
+    y = _mm256_loadu_ps((const float *)b);
+    
     after = rdtscp();
+    // write result to volatile variable so that compiler doesn't optimize away.
+    x1 = x[0];
+    y1 = y[0]; 
+
     count++;
     if ((after - before) > 1000) {
       if (i > skip_first_N && count_old!=0) {
@@ -158,6 +172,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
   auto activations = (running_sum/acts.size());
   Logger::log_info("Determined the number of possible ACTs per refresh interval.");
   Logger::log_data(format_string("num_acts_per_tREFI: %lu", activations));
+
+  exit(0);
 
   return activations;
 }
