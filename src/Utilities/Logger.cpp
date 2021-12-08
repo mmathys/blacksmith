@@ -19,31 +19,31 @@ void Logger::initialize() {
 }
 
 void Logger::close() {
-  instance.logfile << std::endl;
-  instance.logfile.close();
+  std::cout << std::endl;
+  //std::cout.close();
 }
 
 void Logger::log_info(const std::string &message, bool newline) {
-  instance.logfile << FC_CYAN "[+] " << message;
-  instance.logfile << F_RESET;
-  if (newline) instance.logfile << "\n";
+  std::cout << FC_CYAN "[+] " << message;
+  std::cout << F_RESET;
+  if (newline) std::cout << "\n";
 }
 
 void Logger::log_highlight(const std::string &message, bool newline) {
-  instance.logfile << FC_MAGENTA << FF_BOLD << "[+] " << message;
-  instance.logfile << F_RESET;
-  if (newline) instance.logfile << "\n";
+  std::cout << FC_MAGENTA << FF_BOLD << "[+] " << message;
+  std::cout << F_RESET;
+  if (newline) std::cout << "\n";
 }
 
 void Logger::log_error(const std::string &message, bool newline) {
-  instance.logfile << FC_RED "[-] " << message;
-  instance.logfile << F_RESET;
-  if (newline) instance.logfile << "\n";
+  std::cout << FC_RED "[-] " << message;
+  std::cout << F_RESET;
+  if (newline) std::cout << "\n";
 }
 
 void Logger::log_data(const std::string &message, bool newline) {
-  instance.logfile << message;
-  if (newline) instance.logfile << "\n";
+  std::cout << message;
+  if (newline) std::cout << "\n";
 }
 
 void Logger::log_analysis_stage(const std::string &message, bool newline) {
@@ -52,16 +52,16 @@ void Logger::log_analysis_stage(const std::string &message, bool newline) {
   // this makes sure that all log analysis stage messages have the same length
   auto remaining_chars = 80-message.length();
   while (remaining_chars--) ss << "█";
-  instance.logfile << ss.str();
-  instance.logfile << F_RESET;
-  if (newline) instance.logfile << "\n";
+  std::cout << ss.str();
+  std::cout << F_RESET;
+  if (newline) std::cout << "\n";
 }
 
 void Logger::log_debug(const std::string &message, bool newline) {
 #ifdef DEBUG
-  instance.logfile << FC_YELLOW "[DEBUG] " << message;
-  instance.logfile << F_RESET;
-  if (newline) instance.logfile << std::endl;
+  std::cout << FC_YELLOW "[DEBUG] " << message;
+  std::cout << F_RESET;
+  if (newline) std::cout << std::endl;
 #else
   // this is just to ignore complaints of the compiler about unused params
   std::ignore = message;
@@ -90,27 +90,27 @@ void Logger::log_timestamp() {
 
 void Logger::log_bitflip(volatile char *flipped_address, uint64_t row_no, unsigned char actual_value,
                          unsigned char expected_value, unsigned long timestamp, bool newline) {
-  instance.logfile << FC_GREEN
+  std::cout << FC_GREEN
                    << "[!] Flip " << std::hex << (void *) flipped_address << ", "
                    << std::dec << "row " << row_no << ", "
                    << "page offset: " << (uint64_t)flipped_address%(uint64_t)getpagesize() << ", "
                    << "byte offset: " << (uint64_t)flipped_address%(uint64_t)8 << ", "
                    << std::hex << "from " << (int) expected_value << " to " << (int) actual_value << ", "
                    << std::dec << "detected after " << format_timestamp(timestamp - instance.timestamp_start) << ".";
-  instance.logfile << F_RESET;
-  if (newline) instance.logfile << "\n";
+  std::cout << F_RESET;
+  if (newline) std::cout << "\n";
 }
 
 void Logger::log_success(const std::string &message, bool newline) {
-  instance.logfile << FC_GREEN << "[!] " << message;
-  instance.logfile << F_RESET;
-  if (newline) instance.logfile << "\n";
+  std::cout << FC_GREEN << "[!] " << message;
+  std::cout << F_RESET;
+  if (newline) std::cout << "\n";
 }
 
 void Logger::log_failure(const std::string &message, bool newline) {
-  instance.logfile << FC_RED_BRIGHT << "[-] " << message;
-  instance.logfile << F_RESET;
-  if (newline) instance.logfile << "\n";
+  std::cout << FC_RED_BRIGHT << "[-] " << message;
+  std::cout << F_RESET;
+  if (newline) std::cout << "\n";
 }
 
 void Logger::log_metadata(const char *commit_hash, unsigned long run_time_limit_seconds) {
