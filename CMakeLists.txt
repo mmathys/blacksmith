@@ -19,7 +19,7 @@ set(
         FORCE
 )
 
-set (CMAKE_CXX_FLAGS "-march=native")
+set (CMAKE_CXX_FLAGS "-march=skylake")
 
 string(ASCII 27 ESC)
 
