@@ -12,3 +12,7 @@ Some notes:
 - `_mm256_load_ps`: 236 ACTs
 - `_mm256_loadu_ps`: 237 ACTs
 - `_mm256_i64gather_ps`: 164 ACTs
+
+> 3 pts: Modify Blacksmith's asmjit to emit SIMD instructions
+
+TODO
