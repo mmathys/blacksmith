@@ -19,6 +19,8 @@ set(
         FORCE
 )
 
+set (CMAKE_CXX_FLAGS "-march=native")
+
 string(ASCII 27 ESC)
 
 # === DEFINITIONS ==============================================================
