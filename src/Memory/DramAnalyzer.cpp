@@ -124,6 +124,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
   (void)*b;
   __m256 x;
   __m256 y;
+  __m128 x_128;
+  __m128 y_128;
   volatile double x1;
   volatile double y1;
 
@@ -138,6 +140,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
     return val;
   };
 
+  __m256i idx = _mm256_set_epi64x(3, 2, 1, 0);
+
   for (size_t i = 0;; i++) {
     clflushopt(a);
     clflushopt(b);
@@ -148,13 +152,19 @@ size_t DramAnalyzer::count_acts_per_ref() {
     //(void)*a;
     //(void)*b;
 
-    x = _mm256_loadu_ps((const float *)a);
-    y = _mm256_loadu_ps((const float *)b);
+    //x = _mm256_load_ps((const float *)a);
+    //y = _mm256_load_ps((const float *)b);
+    
+    x_128 = _mm256_i64gather_ps((const float*)a, idx, 8);
+    y_128 = _mm256_i64gather_ps((const float*)b, idx, 8);
     
     after = rdtscp();
+    mfence();
     // write result to volatile variable so that compiler doesn't optimize away.
     x1 = x[0];
-    y1 = y[0]; 
+    y1 = y[0];
+    x1 = x_128[0];
+    y1 = y_128[0];
 
     count++;
     if ((after - before) > 1000) {
