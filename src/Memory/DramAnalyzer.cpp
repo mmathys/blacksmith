@@ -115,8 +115,15 @@ void DramAnalyzer::load_known_functions(int num_ranks) {
 
 size_t DramAnalyzer::count_acts_per_ref() {
   size_t skip_first_N = 50;
-  volatile char *a = banks.at(0).at(0);
-  volatile char *b = banks.at(0).at(1);
+  volatile char *a = banks.at(0).at(0); // bank 0, col 0
+  volatile char *b = banks.at(0).at(1); // bank 0, col 1
+  volatile char *a1 = banks.at(1).at(0); // bank 1, col 0
+  volatile char *b1 = banks.at(1).at(1); // bank 1, col 1
+  volatile char *a2 = banks.at(2).at(0); // bank 2, col 0
+  volatile char *b2 = banks.at(2).at(1); // bank 2, col 1
+  volatile char *a3 = banks.at(3).at(0); // bank 3, col 0
+  volatile char *b3 = banks.at(3).at(1); // bank 3, col 1
+
   std::vector<uint64_t> acts;
   uint64_t running_sum = 0;
   uint64_t before, after, count = 0, count_old = 0;
@@ -140,7 +147,9 @@ size_t DramAnalyzer::count_acts_per_ref() {
     return val;
   };
 
-  __m256i idx = _mm256_set_epi64x(3, 2, 1, 0);
+  __m256i idx = _mm256_set_epi64x(3, 2, (uint64_t) a2 - (uint64_t) a, 0);
+
+  Logger::log_info("sarting act test");
 
   for (size_t i = 0;; i++) {
     clflushopt(a);
@@ -155,8 +164,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
     //x = _mm256_load_ps((const float *)a);
     //y = _mm256_load_ps((const float *)b);
     
-    x_128 = _mm256_i64gather_ps((const float*)a, idx, 8);
-    y_128 = _mm256_i64gather_ps((const float*)b, idx, 8);
+    x_128 = _mm256_i64gather_ps((const float*)a, idx, 1);
+    y_128 = _mm256_i64gather_ps((const float*)b, idx, 1);
     
     after = rdtscp();
     mfence();
