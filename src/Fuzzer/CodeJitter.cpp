@@ -159,6 +159,8 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
   std::unordered_map<uint64_t, bool> accessed_before;
 
   size_t cnt_total_activations = 0;
+  
+  a.vxorpd(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);
 
   // hammer each aggressor once
   for (int i = NUM_TIMED_ACCESSES; i < static_cast<int>(aggressor_pairs.size()) - NUM_TIMED_ACCESSES; i++) {
@@ -179,17 +181,13 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
     }
 
     // hammer
-    a.mov(asmjit::x86::rax, cur_addr);
+    a.mov(asmjit::x86::rax, cur_addr); 
     //a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
-
-    /*
-    kX86InstIdVgatherdpd,      // AVX2
-    kX86InstIdVgatherdps,      // AVX2
-    kX86InstIdVgatherqpd,      // AVX2
-    kX86InstIdVgatherqps,      // AVX2
-    */
-    //a.vmovapd(asmjit::x86::xmm0, asmjit::x86::ptr(asmjit::x86::rax));
-    a.vgatherqpd(asmjit::x86::xmm0, asmjit::x86::ptr(asmjit::x86::rax));
+    
+    a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
+    a.vxorpd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::xmm1);
+    asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::xmm1, 1);
+    a.vgatherqpd(asmjit::x86::xmm0, vx_ptr, asmjit::x86::xmm3);
 
     accessed_before[cur_addr] = true;
     a.dec(asmjit::x86::rsi);
