@@ -160,10 +160,78 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
 
   size_t cnt_total_activations = 0;
   
-  a.vxorpd(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);
+  a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
 
+  int i = NUM_TIMED_ACCESSES;
   // hammer each aggressor once
-  for (int i = NUM_TIMED_ACCESSES; i < static_cast<int>(aggressor_pairs.size()) - NUM_TIMED_ACCESSES; i++) {
+  for (; i < static_cast<int>(aggressor_pairs.size()) - NUM_TIMED_ACCESSES-3; i+=4) {
+
+    for(int j = 0; j < 4; j++) {
+      auto cur_addr = (uint64_t) aggressor_pairs[i + j];
+      if (accessed_before[cur_addr]) {
+        // flush
+        if (flushing==FLUSHING_STRATEGY::LATEST_POSSIBLE) {
+          a.mov(asmjit::x86::rax, cur_addr);
+          a.clflushopt(asmjit::x86::ptr(asmjit::x86::rax));
+          accessed_before[cur_addr] = false;
+        }
+        // fence to ensure flushing finished and defined order of aggressors is guaranteed
+        if (fencing==FENCING_STRATEGY::LATEST_POSSIBLE) {
+          a.mfence();
+          accessed_before[cur_addr] = false;
+        }
+      }
+    }
+
+    // hammer
+    //a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
+    
+    std::vector<uint64_t> addr;
+    for(int j = 0; j < 4; j++) {
+      addr.push_back((uint64_t) aggressor_pairs[i + j]);
+    }
+
+    sort(addr.begin(), addr.end());
+
+    // write base address into rax
+    a.mov(asmjit::x86::rax, addr[0]); 
+    
+    a.vxorpd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::xmm1);
+    for (int j = 0; j < 4; j++) {
+      a.mov(asmjit::x86::r8, (uint64_t) addr[j] - addr[0]); // write offset into r8
+      a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(j));
+    }
+    
+    //a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(0));
+    //a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(1));
+    //a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(2));
+    //a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(3));
+
+    // gather them bois
+    asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::xmm1, 1);
+    a.vgatherdpd(asmjit::x86::xmm0, vx_ptr, asmjit::x86::xmm3);
+    
+    for(int j = 0; j < 4; j++) {
+      auto cur_addr = (uint64_t) aggressor_pairs[i + j];
+      accessed_before[cur_addr] = true;
+      a.dec(asmjit::x86::rsi);
+      cnt_total_activations++;
+
+      // flush
+      if (flushing==FLUSHING_STRATEGY::EARLIEST_POSSIBLE) {
+        a.mov(asmjit::x86::rax, cur_addr);
+        a.clflushopt(asmjit::x86::ptr(asmjit::x86::rax));
+      }
+      if (sync_each_ref
+          && ((cnt_total_activations%num_acts_per_trefi)==0)) {
+        std::vector<volatile char *> aggs(aggressor_pairs.begin() + i,
+            std::min(aggressor_pairs.begin() + i + NUM_TIMED_ACCESSES, aggressor_pairs.end()));
+        sync_ref(aggs, a);
+      }
+    }
+  }
+
+  for (; i < static_cast<int>(aggressor_pairs.size()) - NUM_TIMED_ACCESSES; i++) {
     auto cur_addr = (uint64_t) aggressor_pairs[i];
 
     if (accessed_before[cur_addr]) {
@@ -182,19 +250,7 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
 
     // hammer
     a.mov(asmjit::x86::rax, cur_addr); 
-    //a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
-    
-    a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
-    
-    a.vxorpd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::xmm1);
-    a.mov(asmjit::x86::r8, 0);
-    a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(0));
-    a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(1));
-    a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(2));
-    a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(3));
-
-    asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::xmm1, 1);
-    a.vgatherdpd(asmjit::x86::xmm0, vx_ptr, asmjit::x86::xmm3);
+    a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
     
     accessed_before[cur_addr] = true;
     a.dec(asmjit::x86::rsi);
