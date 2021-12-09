@@ -16,3 +16,4 @@ Some notes:
 > 3 pts: Modify Blacksmith's asmjit to emit SIMD instructions
 
 TODO
+- [ ] find out how to execute the SIMD gather instruction with AsmJit

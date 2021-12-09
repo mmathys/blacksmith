@@ -131,8 +131,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
   (void)*b;
   __m256 x;
   __m256 y;
-  __m128 x_128;
-  __m128 y_128;
+  __m256d xd;
+  __m256d yd;
   volatile double x1;
   volatile double y1;
 
@@ -164,16 +164,16 @@ size_t DramAnalyzer::count_acts_per_ref() {
     //x = _mm256_load_ps((const float *)a);
     //y = _mm256_load_ps((const float *)b);
     
-    x_128 = _mm256_i64gather_ps((const float*)a, idx, 1);
-    y_128 = _mm256_i64gather_ps((const float*)b, idx, 1);
+    xd = _mm256_i64gather_pd((const float*)a, idx, 1);
+    yd = _mm256_i64gather_pd((const float*)b, idx, 1);
     
     after = rdtscp();
     mfence();
     // write result to volatile variable so that compiler doesn't optimize away.
     x1 = x[0];
     y1 = y[0];
-    x1 = x_128[0];
-    y1 = y_128[0];
+    x1 = xd[0];
+    y1 = yd[0];
 
     count++;
     if ((after - before) > 1000) {
@@ -192,7 +192,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
   Logger::log_info("Determined the number of possible ACTs per refresh interval.");
   Logger::log_data(format_string("num_acts_per_tREFI: %lu", activations));
 
-  exit(0);
+  //exit(0);
 
   return activations;
 }
