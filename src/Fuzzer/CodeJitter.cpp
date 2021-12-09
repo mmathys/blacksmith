@@ -185,10 +185,17 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
     //a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
     
     a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
+    
     a.vxorpd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::xmm1);
-    asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::xmm1, 1);
-    a.vgatherqpd(asmjit::x86::xmm0, vx_ptr, asmjit::x86::xmm3);
+    a.mov(asmjit::x86::r8, 0);
+    a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(0));
+    a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(1));
+    a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(2));
+    a.vpinsrd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(3));
 
+    asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::xmm1, 1);
+    a.vgatherdpd(asmjit::x86::xmm0, vx_ptr, asmjit::x86::xmm3);
+    
     accessed_before[cur_addr] = true;
     a.dec(asmjit::x86::rsi);
     cnt_total_activations++;
