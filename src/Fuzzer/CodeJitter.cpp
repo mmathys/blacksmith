@@ -180,7 +180,7 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
 
     // hammer
     a.mov(asmjit::x86::rax, cur_addr);
-    a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
+    //a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
 
     /*
     kX86InstIdVgatherdpd,      // AVX2
@@ -188,9 +188,9 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
     kX86InstIdVgatherqpd,      // AVX2
     kX86InstIdVgatherqps,      // AVX2
     */
-    //a.vgatherdpd(asmjit::x86::xmm0, asmjit::x86::ptr(asmjit::x86::rax)._1to4());
+    //a.vgatherdpd(asmjit::x86::xmm0, asmjit::x86::ptr(asmjit::x86::rax));
     a.vmovapd(asmjit::x86::xmm0, asmjit::x86::ptr(asmjit::x86::rax));
-    
+
     accessed_before[cur_addr] = true;
     a.dec(asmjit::x86::rsi);
     cnt_total_activations++;
