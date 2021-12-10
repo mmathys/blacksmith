@@ -114,7 +114,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
     size_t skip_first_N = 50;
     std::vector<uint64_t> addr_a;
     std::vector<uint64_t> addr_b;
-    int size = 8;
+    int size = 4;
     for (int i = 0; i < size; i++) {
         addr_a.push_back((uint64_t)banks.at(i).at(0)); // bank i, col 0
         addr_b.push_back((uint64_t)banks.at(i).at(1)); // bank i, col 1
@@ -149,7 +149,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
     };
 
     std::cout << "testing 4 offset only" << std::endl;
-    //__m256i idx_a = _mm256_set_epi64x((uint64_t) addr_a[3] - (uint64_t) addr_a[0], (uint64_t) addr_a[2] - (uint64_t) addr_a[0], (uint64_t) addr_a[1] - (uint64_t) addr_a[0], 0);
+    __m256i idx_a = _mm256_set_epi64x((uint64_t) addr_a[3] - (uint64_t) addr_a[0], (uint64_t) addr_a[2] - (uint64_t) addr_a[0], (uint64_t) addr_a[1] - (uint64_t) addr_a[0], 0);
+    /*
     __m256i idx_a = _mm256_set_epi32(
         (uint64_t)addr_a[7] - (uint64_t)addr_a[0],
         (uint64_t)addr_a[6] - (uint64_t)addr_a[0],
@@ -159,7 +160,9 @@ size_t DramAnalyzer::count_acts_per_ref() {
         (uint64_t)addr_a[2] - (uint64_t)addr_a[0],
         (uint64_t)addr_a[1] - (uint64_t)addr_a[0],
         0);
-    //__m256i idx_b = _mm256_set_epi64x((uint64_t)addr_b[3] - (uint64_t)addr_b[0], (uint64_t)addr_b[2] - (uint64_t)addr_b[0], (uint64_t)addr_b[1] - (uint64_t)addr_b[0], 0);
+    */
+    __m256i idx_b = _mm256_set_epi64x((uint64_t)addr_b[3] - (uint64_t)addr_b[0], (uint64_t)addr_b[2] - (uint64_t)addr_b[0], (uint64_t)addr_b[1] - (uint64_t)addr_b[0], 0);
+    /*
     __m256i idx_b = _mm256_set_epi32(
         (uint64_t)addr_b[7] - (uint64_t)addr_b[0],
         (uint64_t)addr_b[6] - (uint64_t)addr_b[0],
@@ -169,6 +172,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
         (uint64_t)addr_b[2] - (uint64_t)addr_b[0],
         (uint64_t)addr_b[1] - (uint64_t)addr_b[0],
         0);
+    */
 
     Logger::log_info("sarting act test");
 
@@ -187,11 +191,11 @@ size_t DramAnalyzer::count_acts_per_ref() {
         // x = _mm256_load_ps((const float *)a); // a, a+1, a+2, a+3: some row, same column, but different banks
         // y = _mm256_load_ps((const float *)b); // b, b+1, b+2, b+3
 
-        //xd = _mm256_i64gather_pd((const double *)addr_a[0], idx_a, 1);
-        //yd = _mm256_i64gather_pd((const double *)addr_b[0], idx_b, 1);
+        xd = _mm256_i64gather_pd((const double *)addr_a[0], idx_a, 1);
+        yd = _mm256_i64gather_pd((const double *)addr_b[0], idx_b, 1);
 
-        xs = _mm256_i32gather_ps((const float *)addr_a[0], idx_a, 1);
-        ys = _mm256_i32gather_ps((const float *)addr_b[0], idx_b, 1);
+        //xs = _mm256_i32gather_ps((const float *)addr_a[0], idx_a, 1);
+        //ys = _mm256_i32gather_ps((const float *)addr_b[0], idx_b, 1);
 
         after = rdtscp();
         mfence();
@@ -199,15 +203,16 @@ size_t DramAnalyzer::count_acts_per_ref() {
         // write result to volatile variable so that compiler doesn't optimize away.
         // x1 = x[0];
         // y1 = y[0];
-        /*
+        
         double store_a[4] = {0, 0, 0, 0};
         double store_b[4] = {0, 0, 0, 0};
         _mm256_storeu_pd(store_a, xd);
         _mm256_storeu_pd(store_b, yd);
         x1 = store_a[0];
         y1 = store_b[0];
-        */
+        
 
+        /*
         float store_a[8] = {0, 0, 0, 0, 0, 0, 0, 0};
         float store_b[8] = {0, 0, 0, 0, 0, 0, 0, 0};
         _mm256_storeu_ps(store_a, xs);
@@ -215,6 +220,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
         x1 = store_a[0];
         y1 = store_b[0];
         // y1 = yd[0];
+        */
 
         count++;
         if ((after - before) > 1000) {
@@ -235,7 +241,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
     Logger::log_info("Determined the number of possible ACTs per refresh interval.");
     Logger::log_data(format_string("num_acts_per_tREFI: %lu", activations));
 
-    exit(0);
+    //exit(0);
 
     return activations;
 }
