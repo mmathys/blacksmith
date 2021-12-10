@@ -3,6 +3,8 @@
 #include <cassert>
 #include <unordered_set>
 #include <immintrin.h>
+#include <algorithm>
+#include <iostream>
 
 void DramAnalyzer::find_bank_conflicts() {
   size_t nr_banks_cur = 0;
@@ -124,6 +126,22 @@ size_t DramAnalyzer::count_acts_per_ref() {
   volatile char *a3 = banks.at(3).at(0); // bank 3, col 0
   volatile char *b3 = banks.at(3).at(1); // bank 3, col 1
 
+  
+  std::vector<uint64_t> addr_a;
+  addr_a.push_back((uint64_t)a); 
+  addr_a.push_back((uint64_t)a1); 
+  addr_a.push_back((uint64_t)a2); 
+  addr_a.push_back((uint64_t)a3); 
+  
+  std::vector<uint64_t> addr_b;
+  addr_b.push_back((uint64_t)b);
+  addr_b.push_back((uint64_t)b1);
+  addr_b.push_back((uint64_t)b2);
+  addr_b.push_back((uint64_t)b3);
+
+  std::sort(addr_a.begin(), addr_a.end());
+  std::sort(addr_b.begin(), addr_b.end());
+
   std::vector<uint64_t> acts;
   uint64_t running_sum = 0;
   uint64_t before, after, count = 0, count_old = 0;
@@ -131,8 +149,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
   (void)*b;
   __m256 x;
   __m256 y;
-  __m256d xd;
-  __m256d yd;
+  __m256d xd = _mm256_setzero_pd();
+  __m256d yd = _mm256_setzero_pd();
   volatile double x1;
   volatile double y1;
 
@@ -147,13 +165,21 @@ size_t DramAnalyzer::count_acts_per_ref() {
     return val;
   };
 
-  __m256i idx = _mm256_set_epi64x(3, 2, (uint64_t) a2 - (uint64_t) a, 0);
+  std::cout << "testing 4 offset only" << std::endl;
+  __m256i idx_a = _mm256_set_epi64x((uint64_t) addr_a[2] - (uint64_t) addr_a[0], (uint64_t) addr_a[2] - (uint64_t) addr_a[0], (uint64_t) addr_a[1] - (uint64_t) addr_a[0], 0);
+  __m256i idx_b = _mm256_set_epi64x((uint64_t) addr_b[3] - (uint64_t) addr_b[0], (uint64_t) addr_b[2] - (uint64_t) addr_b[0], (uint64_t) addr_b[1] - (uint64_t) addr_b[0], 0);
 
   Logger::log_info("sarting act test");
 
   for (size_t i = 0;; i++) {
     clflushopt(a);
     clflushopt(b);
+    clflushopt(a1);
+    clflushopt(b1);
+    clflushopt(a2);
+    clflushopt(b2);
+    clflushopt(a3);
+    clflushopt(b3);
     mfence();
     before = rdtscp();
     lfence();
@@ -161,19 +187,25 @@ size_t DramAnalyzer::count_acts_per_ref() {
     //(void)*a;
     //(void)*b;
 
-    //x = _mm256_load_ps((const float *)a);
-    //y = _mm256_load_ps((const float *)b);
+    //x = _mm256_load_ps((const float *)a); // a, a+1, a+2, a+3: some row, same column, but different banks
+    //y = _mm256_load_ps((const float *)b); // b, b+1, b+2, b+3
     
-    xd = _mm256_i64gather_pd((const float*)a, idx, 1);
-    yd = _mm256_i64gather_pd((const float*)b, idx, 1);
+    xd = _mm256_i64gather_pd((const double*)addr_a[0], idx_a, 1);
+    yd = _mm256_i64gather_pd((const double*)addr_b[0], idx_b, 1);
     
     after = rdtscp();
     mfence();
+
     // write result to volatile variable so that compiler doesn't optimize away.
-    x1 = x[0];
-    y1 = y[0];
-    x1 = xd[0];
-    y1 = yd[0];
+    //x1 = x[0];
+    //y1 = y[0];
+    double store_a[4] = {0,0,0,0};
+    double store_b[4] = {0,0,0,0};
+    _mm256_storeu_pd(store_a, xd);
+    _mm256_storeu_pd(store_b, yd);
+    x1 = store_a[0];
+    y1 = store_b[0];
+    //y1 = yd[0];
 
     count++;
     if ((after - before) > 1000) {
@@ -188,11 +220,13 @@ size_t DramAnalyzer::count_acts_per_ref() {
     }
   }
 
+  std::cout << "hammered" << std::endl;
+
   auto activations = (running_sum/acts.size());
   Logger::log_info("Determined the number of possible ACTs per refresh interval.");
   Logger::log_data(format_string("num_acts_per_tREFI: %lu", activations));
 
-  //exit(0);
+  exit(0);
 
   return activations;
 }
