@@ -166,7 +166,7 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
   for (int i = NUM_TIMED_ACCESSES; i < static_cast<int>(aggressor_pairs.size()) - NUM_TIMED_ACCESSES; i++) {
     auto cur_addr = (uint64_t) aggressor_pairs[i];
 
-    // we must generate a'..a''' here.
+    //TODO we must generate a'..a''' here.
 
     if (accessed_before[cur_addr]) {
       // flush
