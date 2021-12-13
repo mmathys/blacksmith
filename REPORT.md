@@ -23,7 +23,7 @@ TODO
   - [ ] save fuzzer run (do not pass sweep)
   - [ ] use --load-json and --sweeping
 - [ ] do this on DRAM 2, 3, 6.
-- [ ] benchmark different levels of parallelization on node 6 (fuzzer + sweep with one 
+- [ ] benchmark different levels of parallelization on node 6 (fuzzer + sweep in one go)
 - [ ] prepare report
   - [ ] explain why vgather didn't work out as well as simple pipelined accesses.
 - [ ] prepare short presentation 
