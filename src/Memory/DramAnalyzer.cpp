@@ -172,8 +172,12 @@ size_t DramAnalyzer::count_acts_per_ref() {
     // write result to volatile variable so that compiler doesn't optimize away.
     x1 = x[0];
     y1 = y[0];
-    x1 = xd[0];
-    y1 = yd[0];
+    double store_a[4] = {0, 0, 0, 0};
+    double store_b[4] = {0, 0, 0, 0};
+    _mm256_storeu_pd(store_a, xd);
+    _mm256_storeu_pd(store_b, yd);
+    x1 = store_a[0];
+    y1 = store_b[0];
 
     count++;
     if ((after - before) > 1000) {
