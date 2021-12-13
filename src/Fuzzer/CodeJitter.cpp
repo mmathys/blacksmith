@@ -175,7 +175,7 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
       a_vec.push_back((uint64_t) inc_a.to_virt());
     }
 
-    //std::sort(a_vec.begin(), a_vec.end());
+    std::sort(a_vec.begin(), a_vec.end());
 
     for(int j = 0; j < 4; j++) {
       uint64_t addr = a_vec[j];
@@ -198,9 +198,22 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
       //a.mov(asmjit::x86::r8, a_vec[j] - a_vec[0]); // write offset into r8
       //a.vpinsrq(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(j));
     }
+    
+    a.mov(asmjit::x86::r8, 0); 
+    a.vmovq(asmjit::x86::xmm2, asmjit::x86::r8);
+    a.mov(asmjit::x86::r8, a_vec[1] - a_vec[0]); 
+    a.vpinsrq(asmjit::x86::xmm1, asmjit::x86::xmm2, asmjit::x86::r8, asmjit::Imm(1));
+
+    a.mov(asmjit::x86::r8, a_vec[2] - a_vec[0]); 
+    a.vmovq(asmjit::x86::xmm3, asmjit::x86::r8);
+    a.mov(asmjit::x86::r8, a_vec[3] - a_vec[0]); 
+    a.vpinsrq(asmjit::x86::xmm0, asmjit::x86::xmm3, asmjit::x86::r8, asmjit::Imm(1));
+    
+    a.vinserti128(asmjit::x86::ymm0, asmjit::x86::ymm0, asmjit::x86::xmm1, asmjit::Imm(1));
 
     // hammer
     a.mov(asmjit::x86::rax, a_vec[0]);
+    /*
     a.mov(asmjit::x86::r8, a_vec[1]);
     a.mov(asmjit::x86::r9, a_vec[2]);
     a.mov(asmjit::x86::r10, a_vec[3]);
@@ -208,11 +221,12 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
     a.mov(asmjit::x86::r11, asmjit::x86::ptr(asmjit::x86::r8));
     a.mov(asmjit::x86::r12, asmjit::x86::ptr(asmjit::x86::r9));
     a.mov(asmjit::x86::r13, asmjit::x86::ptr(asmjit::x86::r10));
-    
-    //a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
+    */
+
+    a.vpcmpeqw(asmjit::x86::ymm3, asmjit::x86::ymm3, asmjit::x86::ymm3);     // ymm3: mask to all 1s
     //a.vxorpd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::xmm1);
-    //asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::xmm1, 1);
-    //a.vgatherqpd(asmjit::x86::xmm0, vx_ptr, asmjit::x86::xmm3);
+    asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::ymm0, 1);
+    a.vgatherqpd(asmjit::x86::ymm1, vx_ptr, asmjit::x86::ymm3);
 
     accessed_before[cur_addr] = true;
     a.dec(asmjit::x86::rsi);
