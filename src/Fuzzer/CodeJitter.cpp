@@ -1,4 +1,7 @@
 #include "Fuzzer/CodeJitter.hpp"
+#include "Memory/DRAMAddr.hpp"
+
+#include <algorithm>
 
 CodeJitter::CodeJitter()
     : pattern_sync_each_ref(false),
@@ -93,7 +96,6 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
         "Function pointer is not NULL, cannot continue jitting code without leaking memory. Did you forget to call cleanup() before?");
     exit(1);
   }
-
 #ifdef ENABLE_JITTING
   asmjit::CodeHolder code;
   code.init(runtime.environment());
@@ -165,6 +167,15 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
   // hammer each aggressor once
   for (int i = NUM_TIMED_ACCESSES; i < static_cast<int>(aggressor_pairs.size()) - NUM_TIMED_ACCESSES; i++) {
     auto cur_addr = (uint64_t) aggressor_pairs[i];
+    std::vector<uint64_t> a_vec;
+    a_vec.push_back(cur_addr);
+    for(int j = 1; j < 4; j++) {
+      DRAMAddr prev_a((void*) a_vec[j - 1]);
+      DRAMAddr inc_a = prev_a.add(1, 0, 0);
+      a_vec.push_back((uint64_t) inc_a.to_virt());
+    }
+
+    std::sort(a_vec.begin(), a_vec.end());
 
     if (accessed_before[cur_addr]) {
       // flush
@@ -178,6 +189,11 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
         a.mfence();
         accessed_before[cur_addr] = false;
       }
+    }
+
+    for (int j = 0; j < 4; j++) {
+      //a.mov(asmjit::x86::r8, a_vec[j] - a_vec[0]); // write offset into r8
+      //a.vpinsrq(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::r8, asmjit::Imm(j));
     }
 
     // hammer

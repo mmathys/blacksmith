@@ -216,7 +216,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
   Logger::log_info("Determined the number of possible ACTs per refresh interval.");
   Logger::log_data(format_string("num_acts_per_tREFI: %lu", activations));
 
-  exit(0);
+  //exit(0);
 
   return activations;
 }
