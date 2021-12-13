@@ -197,7 +197,7 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
     }
 
     // hammer
-    a.mov(asmjit::x86::rax, cur_addr); 
+    a.mov(asmjit::x86::rax, a_vec[1]); 
     //a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
     
     a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
