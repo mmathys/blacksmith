@@ -19,6 +19,9 @@ Some notes:
 
 TODO
 - [x] find out how to execute the SIMD gather instruction with AsmJit
+- [ ] update report
+  - [ ] run benchmarks again with fixed code
+  - [ ] add testing of i32 stuff
 - [ ] find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern (for 4x parallelization)
   - [ ] save fuzzer run (do not pass sweep)
   - [ ] use --load-json and --sweeping
