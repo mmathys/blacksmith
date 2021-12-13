@@ -1,9 +1,11 @@
 #include "Memory/DramAnalyzer.hpp"
+#include "Memory/DRAMAddr.hpp"
 
 #include <cassert>
 #include <unordered_set>
 #include <immintrin.h>
 #include <algorithm>
+#include <iostream>
 
 void DramAnalyzer::find_bank_conflicts() {
   size_t nr_banks_cur = 0;
@@ -118,16 +120,25 @@ size_t DramAnalyzer::count_acts_per_ref() {
   size_t skip_first_N = 50;
 
   std::vector<uint64_t> a;
-  a.push_back((uint64_t) banks.at(0).at(0)); // bank 0, col 0
-  a.push_back((uint64_t) banks.at(1).at(0)); // bank 1, col 0
-  a.push_back((uint64_t) banks.at(2).at(0)); // bank 2, col 0
-  a.push_back((uint64_t) banks.at(3).at(0)); // bank 3, col 0
-  
   std::vector<uint64_t> b;
-  b.push_back((uint64_t)banks.at(0).at(1)); // bank 0, col 1
-  b.push_back((uint64_t)banks.at(1).at(1)); // bank 1, col 1
-  b.push_back((uint64_t)banks.at(2).at(1)); // bank 2, col 1
-  b.push_back((uint64_t)banks.at(3).at(1)); // bank 3, col 1
+  a.push_back((uint64_t) banks.at(0).at(0)); // bank 0, col 0
+  b.push_back((uint64_t) banks.at(0).at(1)); // bank 0, col 1
+  
+  for(int i = 1; i < 4; i++) {
+    DRAMAddr prev_a((void*) a[i - 1]);
+    DRAMAddr prev_b((void*) b[i - 1]);
+
+    DRAMAddr inc_a = prev_a.add(1, 0, 0);
+    DRAMAddr inc_b = prev_b.add(1, 0, 0);
+    
+    a.push_back((uint64_t) inc_a.to_virt());
+    b.push_back((uint64_t) inc_b.to_virt());
+  }
+
+  DRAMAddr testAddr((void*) a[0]);
+  std::cout << testAddr.bank << std::endl;
+  DRAMAddr testAddr2((void*) a[1]);
+  std::cout << testAddr2.bank << std::endl;
 
   std::sort(a.begin(), a.end());
   std::sort(b.begin(), b.end());
