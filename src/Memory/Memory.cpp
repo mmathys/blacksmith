@@ -80,9 +80,13 @@ size_t Memory::check_memory(PatternAddressMapper &mapping, bool reproducibility_
   size_t sum_found_bitflips = 0;
   for (const auto &victim_row : victim_rows) {
     DRAMAddr victimAddr((void*) victim_row);
-    const volatile char* start = (volatile char*) victimAddr.add(1, 0, 0).to_virt();
-    const volatile char* end = (volatile char *) ((uint64_t)victim_row+DRAMAddr::get_row_increment());
-    sum_found_bitflips += check_memory_internal(mapping, start, end, reproducibility_mode, verbose);
+    // check for all banks!
+    for(int i = 0; i < 4; i++) {
+      const volatile char* start = (volatile char*) victimAddr.to_virt();
+      const volatile char* end = (volatile char *) ((uint64_t)start+DRAMAddr::get_row_increment());
+      sum_found_bitflips += check_memory_internal(mapping, start, end, reproducibility_mode, verbose);
+      victimAddr.add_inplace(1, 0, 0);
+    }
   }
   return sum_found_bitflips;
 }
