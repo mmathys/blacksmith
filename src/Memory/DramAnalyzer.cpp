@@ -3,6 +3,7 @@
 #include <cassert>
 #include <unordered_set>
 #include <immintrin.h>
+#include <algorithm>
 
 void DramAnalyzer::find_bank_conflicts() {
   size_t nr_banks_cur = 0;
@@ -115,20 +116,25 @@ void DramAnalyzer::load_known_functions(int num_ranks) {
 
 size_t DramAnalyzer::count_acts_per_ref() {
   size_t skip_first_N = 50;
-  volatile char *a = banks.at(0).at(0); // bank 0, col 0
-  volatile char *b = banks.at(0).at(1); // bank 0, col 1
-  volatile char *a1 = banks.at(1).at(0); // bank 1, col 0
-  volatile char *b1 = banks.at(1).at(1); // bank 1, col 1
-  volatile char *a2 = banks.at(2).at(0); // bank 2, col 0
-  volatile char *b2 = banks.at(2).at(1); // bank 2, col 1
-  volatile char *a3 = banks.at(3).at(0); // bank 3, col 0
-  volatile char *b3 = banks.at(3).at(1); // bank 3, col 1
+
+  std::vector<uint64_t> a;
+  a.push_back((uint64_t) banks.at(0).at(0)); // bank 0, col 0
+  a.push_back((uint64_t) banks.at(1).at(0)); // bank 1, col 0
+  a.push_back((uint64_t) banks.at(2).at(0)); // bank 2, col 0
+  a.push_back((uint64_t) banks.at(3).at(0)); // bank 3, col 0
+  
+  std::vector<uint64_t> b;
+  b.push_back((uint64_t)banks.at(0).at(1)); // bank 0, col 1
+  b.push_back((uint64_t)banks.at(1).at(1)); // bank 1, col 1
+  b.push_back((uint64_t)banks.at(2).at(1)); // bank 2, col 1
+  b.push_back((uint64_t)banks.at(3).at(1)); // bank 3, col 1
+
+  std::sort(a.begin(), a.end());
+  std::sort(b.begin(), b.end());
 
   std::vector<uint64_t> acts;
   uint64_t running_sum = 0;
   uint64_t before, after, count = 0, count_old = 0;
-  (void)*a;
-  (void)*b;
   __m256 x;
   __m256 y;
   __m256d xd;
@@ -147,13 +153,16 @@ size_t DramAnalyzer::count_acts_per_ref() {
     return val;
   };
 
-  __m256i idx = _mm256_set_epi64x(3, 2, (uint64_t) a2 - (uint64_t) a, 0);
+  __m256i idx_a = _mm256_set_epi64x(a[3] - a[0], a[2] - a[0], a[1] - a[0], 0);
+  __m256i idx_b = _mm256_set_epi64x(b[3] - b[0], b[2] - b[0], b[1] - b[0], 0);
 
   Logger::log_info("sarting act test");
 
   for (size_t i = 0;; i++) {
-    clflushopt(a);
-    clflushopt(b);
+    for(int j = 0; j < 4; j++) {
+      clflushopt((volatile char*) a[j]);
+      clflushopt((volatile char*) b[j]);
+    }
     mfence();
     before = rdtscp();
     lfence();
@@ -164,8 +173,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
     //x = _mm256_load_ps((const float *)a);
     //y = _mm256_load_ps((const float *)b);
     
-    xd = _mm256_i64gather_pd((const float*)a, idx, 1);
-    yd = _mm256_i64gather_pd((const float*)b, idx, 1);
+    xd = _mm256_i64gather_pd((const float*)a[0], idx_a, 1);
+    yd = _mm256_i64gather_pd((const float*)b[0], idx_b, 1);
     
     after = rdtscp();
     mfence();
@@ -196,7 +205,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
   Logger::log_info("Determined the number of possible ACTs per refresh interval.");
   Logger::log_data(format_string("num_acts_per_tREFI: %lu", activations));
 
-  //exit(0);
+  exit(0);
 
   return activations;
 }
