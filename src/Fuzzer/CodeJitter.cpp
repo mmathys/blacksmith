@@ -175,19 +175,22 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
       a_vec.push_back((uint64_t) inc_a.to_virt());
     }
 
-    std::sort(a_vec.begin(), a_vec.end());
+    //std::sort(a_vec.begin(), a_vec.end());
 
-    if (accessed_before[cur_addr]) {
-      // flush
-      if (flushing==FLUSHING_STRATEGY::LATEST_POSSIBLE) {
-        a.mov(asmjit::x86::rax, cur_addr);
-        a.clflushopt(asmjit::x86::ptr(asmjit::x86::rax));
-        accessed_before[cur_addr] = false;
-      }
-      // fence to ensure flushing finished and defined order of aggressors is guaranteed
-      if (fencing==FENCING_STRATEGY::LATEST_POSSIBLE) {
-        a.mfence();
-        accessed_before[cur_addr] = false;
+    for(int j = 0; j < 4; j++) {
+      uint64_t addr = a_vec[j];
+      if (accessed_before[addr]) {
+        // flush
+        if (flushing==FLUSHING_STRATEGY::LATEST_POSSIBLE) {
+          a.mov(asmjit::x86::rax, addr);
+          a.clflushopt(asmjit::x86::ptr(asmjit::x86::rax));
+          accessed_before[addr] = false;
+        }
+        // fence to ensure flushing finished and defined order of aggressors is guaranteed
+        if (fencing==FENCING_STRATEGY::LATEST_POSSIBLE) {
+          a.mfence();
+          accessed_before[addr] = false;
+        }
       }
     }
 
@@ -197,7 +200,7 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
     }
 
     // hammer
-    a.mov(asmjit::x86::rax, a_vec[1]); 
+    a.mov(asmjit::x86::rax, a_vec[0]);
     //a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
     
     a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
