@@ -19,7 +19,7 @@ Some notes:
 
 TODO
 - [x] find out how to execute the SIMD gather instruction with AsmJit
-- [ ] find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern.
+- [ ] find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern (for 4x parallelization)
   - [ ] save fuzzer run (do not pass sweep)
   - [ ] use --load-json and --sweeping
 - [ ] do this on DRAM 2, 3, 6.
