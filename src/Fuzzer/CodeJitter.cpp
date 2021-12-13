@@ -201,12 +201,18 @@ void CodeJitter::jit_strict(int num_acts_per_trefi,
 
     // hammer
     a.mov(asmjit::x86::rax, a_vec[0]);
-    //a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
+    a.mov(asmjit::x86::r8, a_vec[1]);
+    a.mov(asmjit::x86::r9, a_vec[2]);
+    a.mov(asmjit::x86::r10, a_vec[3]);
+    a.mov(asmjit::x86::rcx, asmjit::x86::ptr(asmjit::x86::rax));
+    a.mov(asmjit::x86::r11, asmjit::x86::ptr(asmjit::x86::r8));
+    a.mov(asmjit::x86::r12, asmjit::x86::ptr(asmjit::x86::r9));
+    a.mov(asmjit::x86::r13, asmjit::x86::ptr(asmjit::x86::r10));
     
-    a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
-    a.vxorpd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::xmm1);
-    asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::xmm1, 1);
-    a.vgatherqpd(asmjit::x86::xmm0, vx_ptr, asmjit::x86::xmm3);
+    //a.vpcmpeqw(asmjit::x86::xmm3, asmjit::x86::xmm3, asmjit::x86::xmm3);     // xmm3: mask to all 1s
+    //a.vxorpd(asmjit::x86::xmm1, asmjit::x86::xmm1, asmjit::x86::xmm1);
+    //asmjit::x86::Mem vx_ptr = asmjit::x86::ptr(asmjit::x86::rax, asmjit::x86::xmm1, 1);
+    //a.vgatherqpd(asmjit::x86::xmm0, vx_ptr, asmjit::x86::xmm3);
 
     accessed_before[cur_addr] = true;
     a.dec(asmjit::x86::rsi);
