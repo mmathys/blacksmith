@@ -15,5 +15,15 @@ Some notes:
 
 > 3 pts: Modify Blacksmith's asmjit to emit SIMD instructions
 
+## Week 8
+
 TODO
-- [ ] find out how to execute the SIMD gather instruction with AsmJit
+- [x] find out how to execute the SIMD gather instruction with AsmJit
+- [ ] find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern.
+  - [ ] save fuzzer run (do not pass sweep)
+  - [ ] use --load-json and --sweeping
+- [ ] do this on DRAM 2, 3, 6.
+- [ ] benchmark different levels of parallelization on node 6 (fuzzer + sweep with one 
+- [ ] prepare report
+  - [ ] explain why vgather didn't work out as well as simple pipelined accesses.
+- [ ] prepare short presentation 
