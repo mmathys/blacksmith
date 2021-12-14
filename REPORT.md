@@ -17,10 +17,15 @@ Some notes:
 
 ## Week 8
 
+TODO: save aggressors into AVX (sixteen YMM) -> sixteen aggressor rows
+
 TODO
 - [x] find out how to execute the SIMD gather instruction with AsmJit
 - [x] modify fuzzer so that it runs faster
   - [x] limit short fuzzer to only one pattern (?)
+- [ ] update report
+  - [ ] run benchmarks again with fixed code
+  - [ ] add testing of i32 stuff
 - [ ] find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern (for 4x parallelization)
   - [ ] save fuzzer run (do not pass sweep)
   - [ ] use --load-json and --sweeping
@@ -28,4 +33,4 @@ TODO
 - [ ] benchmark different levels of parallelization on node 6 (fuzzer + sweep in one go)
 - [ ] prepare report
   - [ ] explain why vgather didn't work out as well as simple pipelined accesses.
-- [ ] prepare short presentation 
+- [ ] prepare short presentation
