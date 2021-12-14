@@ -19,6 +19,8 @@ Some notes:
 
 TODO
 - [x] find out how to execute the SIMD gather instruction with AsmJit
+- [x] modify fuzzer so that it runs faster
+  - [x] limit short fuzzer to only one pattern (?)
 - [ ] find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern (for 4x parallelization)
   - [ ] save fuzzer run (do not pass sweep)
   - [ ] use --load-json and --sweeping
