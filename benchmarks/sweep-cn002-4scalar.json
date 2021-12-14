@@ -1,0 +1,51 @@
+{
+    "metadata": {
+        "dimm_id": 1,
+        "end": 1639480908,
+        "memory_config": {
+            "banks": 16,
+            "channels": 1,
+            "dimms": 1,
+            "ranks": 1
+        },
+        "num_patterns": 1,
+        "start": 1639480654
+    },
+    "sweeps": [
+        {
+            "flips": {
+                "details": [
+                    {
+                        "addr": "0x202454eff2",
+                        "bitmask": 64,
+                        "data": 139,
+                        "dram_addr": {
+                            "bank": 4,
+                            "col": 6130,
+                            "row": 4650
+                        },
+                        "observed_at": 1639480716,
+                        "page_offset": 4082
+                    },
+                    {
+                        "addr": "0x2022820424",
+                        "bitmask": 64,
+                        "data": 244,
+                        "dram_addr": {
+                            "bank": 4,
+                            "col": 548,
+                            "row": 4417
+                        },
+                        "observed_at": 1639480871,
+                        "page_offset": 1060
+                    }
+                ],
+                "one_to_zero": 1,
+                "total": 2,
+                "zero_to_one": 1
+            },
+            "mapping": "9e34c6c8-65f8-44dc-8692-b8eaa9f6fbad",
+            "pattern": "55593c4e-e80d-4bb0-aa3f-2dc94555449c"
+        }
+    ]
+}
