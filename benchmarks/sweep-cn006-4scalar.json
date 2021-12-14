@@ -1,0 +1,3807 @@
+{
+    "metadata": {
+        "dimm_id": 1,
+        "end": 1639478131,
+        "memory_config": {
+            "banks": 16,
+            "channels": 1,
+            "dimms": 1,
+            "ranks": 1
+        },
+        "num_patterns": 1,
+        "start": 1639478106
+    },
+    "sweeps": [
+        {
+            "flips": {
+                "details": [
+                    {
+                        "addr": "0x20124680ce",
+                        "bitmask": 16,
+                        "data": 102,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 78,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 206
+                    },
+                    {
+                        "addr": "0x20124681f9",
+                        "bitmask": 1,
+                        "data": 236,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 249,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 505
+                    },
+                    {
+                        "addr": "0x2012468ee8",
+                        "bitmask": 16,
+                        "data": 249,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1896,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 3816
+                    },
+                    {
+                        "addr": "0x2012468f4a",
+                        "bitmask": 4,
+                        "data": 5,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1930,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 3914
+                    },
+                    {
+                        "addr": "0x2012468ff8",
+                        "bitmask": 1,
+                        "data": 29,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2040,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 4088
+                    },
+                    {
+                        "addr": "0x2012469660",
+                        "bitmask": 1,
+                        "data": 180,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2848,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 1632
+                    },
+                    {
+                        "addr": "0x2012469f71",
+                        "bitmask": 128,
+                        "data": 173,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4017,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 3953
+                    },
+                    {
+                        "addr": "0x201246a536",
+                        "bitmask": 16,
+                        "data": 242,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4790,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 1334
+                    },
+                    {
+                        "addr": "0x201246a716",
+                        "bitmask": 2,
+                        "data": 235,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5014,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 1814
+                    },
+                    {
+                        "addr": "0x201246b7a1",
+                        "bitmask": 32,
+                        "data": 73,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7137,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 1953
+                    },
+                    {
+                        "addr": "0x201246b917",
+                        "bitmask": 1,
+                        "data": 77,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7319,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 2327
+                    },
+                    {
+                        "addr": "0x201246bd11",
+                        "bitmask": 16,
+                        "data": 76,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7825,
+                            "row": 2339
+                        },
+                        "observed_at": 1639478107,
+                        "page_offset": 3345
+                    },
+                    {
+                        "addr": "0x2011268048",
+                        "bitmask": 16,
+                        "data": 244,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 8,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 72
+                    },
+                    {
+                        "addr": "0x2011268141",
+                        "bitmask": 32,
+                        "data": 205,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 129,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 321
+                    },
+                    {
+                        "addr": "0x2011268244",
+                        "bitmask": 128,
+                        "data": 164,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 260,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 580
+                    },
+                    {
+                        "addr": "0x20112683d6",
+                        "bitmask": 2,
+                        "data": 132,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 470,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 982
+                    },
+                    {
+                        "addr": "0x20112684e6",
+                        "bitmask": 16,
+                        "data": 224,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 614,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 1254
+                    },
+                    {
+                        "addr": "0x20112684fe",
+                        "bitmask": 2,
+                        "data": 30,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 638,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 1278
+                    },
+                    {
+                        "addr": "0x201126895e",
+                        "bitmask": 16,
+                        "data": 72,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1182,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 2398
+                    },
+                    {
+                        "addr": "0x20112689e6",
+                        "bitmask": 4,
+                        "data": 9,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1254,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 2534
+                    },
+                    {
+                        "addr": "0x2011268ce5",
+                        "bitmask": 4,
+                        "data": 216,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1637,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 3301
+                    },
+                    {
+                        "addr": "0x2011268dc7",
+                        "bitmask": 8,
+                        "data": 95,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1735,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 3527
+                    },
+                    {
+                        "addr": "0x201126924f",
+                        "bitmask": 16,
+                        "data": 35,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2319,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 591
+                    },
+                    {
+                        "addr": "0x2011269273",
+                        "bitmask": 1,
+                        "data": 12,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2355,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 627
+                    },
+                    {
+                        "addr": "0x201126944e",
+                        "bitmask": 2,
+                        "data": 118,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2574,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 1102
+                    },
+                    {
+                        "addr": "0x20112695e6",
+                        "bitmask": 8,
+                        "data": 174,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2790,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 1510
+                    },
+                    {
+                        "addr": "0x2011269666",
+                        "bitmask": 1,
+                        "data": 128,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2854,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 1638
+                    },
+                    {
+                        "addr": "0x2011269a5e",
+                        "bitmask": 16,
+                        "data": 164,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3358,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 2654
+                    },
+                    {
+                        "addr": "0x2011269af1",
+                        "bitmask": 8,
+                        "data": 205,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3441,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 2801
+                    },
+                    {
+                        "addr": "0x2011269dc3",
+                        "bitmask": 8,
+                        "data": 32,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3779,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 3523
+                    },
+                    {
+                        "addr": "0x2011269e51",
+                        "bitmask": 8,
+                        "data": 40,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3857,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 3665
+                    },
+                    {
+                        "addr": "0x201126a136",
+                        "bitmask": 4,
+                        "data": 76,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4278,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 310
+                    },
+                    {
+                        "addr": "0x201126a137",
+                        "bitmask": 32,
+                        "data": 30,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4279,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 311
+                    },
+                    {
+                        "addr": "0x201126a1ae",
+                        "bitmask": 1,
+                        "data": 188,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4334,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 430
+                    },
+                    {
+                        "addr": "0x201126a28e",
+                        "bitmask": 64,
+                        "data": 108,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4430,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 654
+                    },
+                    {
+                        "addr": "0x201126a2bc",
+                        "bitmask": 8,
+                        "data": 250,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4476,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 700
+                    },
+                    {
+                        "addr": "0x201126a586",
+                        "bitmask": 32,
+                        "data": 34,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4806,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 1414
+                    },
+                    {
+                        "addr": "0x201126a5b6",
+                        "bitmask": 8,
+                        "data": 186,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4854,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 1462
+                    },
+                    {
+                        "addr": "0x201126af07",
+                        "bitmask": 16,
+                        "data": 64,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6023,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 3847
+                    },
+                    {
+                        "addr": "0x201126b09c",
+                        "bitmask": 64,
+                        "data": 118,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6236,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 156
+                    },
+                    {
+                        "addr": "0x201126b10e",
+                        "bitmask": 8,
+                        "data": 183,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6286,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 270
+                    },
+                    {
+                        "addr": "0x201126b236",
+                        "bitmask": 2,
+                        "data": 132,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6454,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 566
+                    },
+                    {
+                        "addr": "0x201126b7a1",
+                        "bitmask": 128,
+                        "data": 233,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7137,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 1953
+                    },
+                    {
+                        "addr": "0x201126bb93",
+                        "bitmask": 64,
+                        "data": 74,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7635,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 2963
+                    },
+                    {
+                        "addr": "0x201126be92",
+                        "bitmask": 32,
+                        "data": 107,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 8018,
+                            "row": 2195
+                        },
+                        "observed_at": 1639478108,
+                        "page_offset": 3730
+                    },
+                    {
+                        "addr": "0x2010c68eee",
+                        "bitmask": 64,
+                        "data": 109,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1902,
+                            "row": 2147
+                        },
+                        "observed_at": 1639478109,
+                        "page_offset": 3822
+                    },
+                    {
+                        "addr": "0x2010c6ac1f",
+                        "bitmask": 1,
+                        "data": 123,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5663,
+                            "row": 2147
+                        },
+                        "observed_at": 1639478109,
+                        "page_offset": 3103
+                    },
+                    {
+                        "addr": "0x2010c6b81f",
+                        "bitmask": 1,
+                        "data": 37,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7199,
+                            "row": 2147
+                        },
+                        "observed_at": 1639478109,
+                        "page_offset": 2079
+                    },
+                    {
+                        "addr": "0x2010c6b9a7",
+                        "bitmask": 8,
+                        "data": 104,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7399,
+                            "row": 2147
+                        },
+                        "observed_at": 1639478109,
+                        "page_offset": 2471
+                    },
+                    {
+                        "addr": "0x201249554e",
+                        "bitmask": 16,
+                        "data": 154,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2702,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 1358
+                    },
+                    {
+                        "addr": "0x2012495646",
+                        "bitmask": 64,
+                        "data": 231,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2822,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 1606
+                    },
+                    {
+                        "addr": "0x201249586f",
+                        "bitmask": 16,
+                        "data": 126,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3119,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 2159
+                    },
+                    {
+                        "addr": "0x2012495d50",
+                        "bitmask": 8,
+                        "data": 237,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3728,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 3408
+                    },
+                    {
+                        "addr": "0x201249619b",
+                        "bitmask": 16,
+                        "data": 26,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4315,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 411
+                    },
+                    {
+                        "addr": "0x2012496431",
+                        "bitmask": 16,
+                        "data": 226,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4657,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 1073
+                    },
+                    {
+                        "addr": "0x201249758a",
+                        "bitmask": 32,
+                        "data": 224,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6858,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 1418
+                    },
+                    {
+                        "addr": "0x2012497714",
+                        "bitmask": 2,
+                        "data": 214,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7060,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 1812
+                    },
+                    {
+                        "addr": "0x2012497715",
+                        "bitmask": 4,
+                        "data": 180,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7061,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 1813
+                    },
+                    {
+                        "addr": "0x2012497c3e",
+                        "bitmask": 1,
+                        "data": 106,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7742,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 3134
+                    },
+                    {
+                        "addr": "0x20124941c7",
+                        "bitmask": 1,
+                        "data": 12,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 199,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 455
+                    },
+                    {
+                        "addr": "0x2012494afb",
+                        "bitmask": 64,
+                        "data": 0,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1403,
+                            "row": 2340
+                        },
+                        "observed_at": 1639478110,
+                        "page_offset": 2811
+                    },
+                    {
+                        "addr": "0x2011294142",
+                        "bitmask": 4,
+                        "data": 194,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 130,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 322
+                    },
+                    {
+                        "addr": "0x201129426c",
+                        "bitmask": 2,
+                        "data": 97,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 300,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 620
+                    },
+                    {
+                        "addr": "0x2011294679",
+                        "bitmask": 2,
+                        "data": 49,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 825,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1657
+                    },
+                    {
+                        "addr": "0x2011294751",
+                        "bitmask": 64,
+                        "data": 168,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 913,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1873
+                    },
+                    {
+                        "addr": "0x201129477a",
+                        "bitmask": 32,
+                        "data": 37,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 954,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1914
+                    },
+                    {
+                        "addr": "0x2011294879",
+                        "bitmask": 8,
+                        "data": 14,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1081,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2169
+                    },
+                    {
+                        "addr": "0x20112948c8",
+                        "bitmask": 64,
+                        "data": 194,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1096,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2248
+                    },
+                    {
+                        "addr": "0x2011294dfa",
+                        "bitmask": 16,
+                        "data": 216,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1786,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3578
+                    },
+                    {
+                        "addr": "0x2011294f49",
+                        "bitmask": 2,
+                        "data": 33,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1929,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3913
+                    },
+                    {
+                        "addr": "0x2011294f76",
+                        "bitmask": 128,
+                        "data": 92,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1974,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3958
+                    },
+                    {
+                        "addr": "0x2011294fdf",
+                        "bitmask": 64,
+                        "data": 27,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2015,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 4063
+                    },
+                    {
+                        "addr": "0x201129514f",
+                        "bitmask": 1,
+                        "data": 40,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2191,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 335
+                    },
+                    {
+                        "addr": "0x20112952ef",
+                        "bitmask": 32,
+                        "data": 8,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2415,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 751
+                    },
+                    {
+                        "addr": "0x2011295341",
+                        "bitmask": 1,
+                        "data": 215,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2433,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 833
+                    },
+                    {
+                        "addr": "0x201129534a",
+                        "bitmask": 4,
+                        "data": 200,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2442,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 842
+                    },
+                    {
+                        "addr": "0x201129535a",
+                        "bitmask": 8,
+                        "data": 236,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2458,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 858
+                    },
+                    {
+                        "addr": "0x20112956e4",
+                        "bitmask": 2,
+                        "data": 144,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2916,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1764
+                    },
+                    {
+                        "addr": "0x2011295777",
+                        "bitmask": 4,
+                        "data": 19,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2999,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1911
+                    },
+                    {
+                        "addr": "0x20112959e9",
+                        "bitmask": 64,
+                        "data": 185,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3305,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2537
+                    },
+                    {
+                        "addr": "0x2011295ace",
+                        "bitmask": 128,
+                        "data": 40,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3406,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2766
+                    },
+                    {
+                        "addr": "0x2011295ad8",
+                        "bitmask": 4,
+                        "data": 15,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3416,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2776
+                    },
+                    {
+                        "addr": "0x2011295b77",
+                        "bitmask": 32,
+                        "data": 35,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3511,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2935
+                    },
+                    {
+                        "addr": "0x2011295be8",
+                        "bitmask": 1,
+                        "data": 117,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3560,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3048
+                    },
+                    {
+                        "addr": "0x2011295c52",
+                        "bitmask": 128,
+                        "data": 146,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3602,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3154
+                    },
+                    {
+                        "addr": "0x2011295cd1",
+                        "bitmask": 2,
+                        "data": 71,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3665,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3281
+                    },
+                    {
+                        "addr": "0x2011295ef8",
+                        "bitmask": 32,
+                        "data": 221,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3960,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3832
+                    },
+                    {
+                        "addr": "0x2011295f56",
+                        "bitmask": 8,
+                        "data": 203,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3990,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3926
+                    },
+                    {
+                        "addr": "0x20112960ba",
+                        "bitmask": 4,
+                        "data": 147,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4218,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 186
+                    },
+                    {
+                        "addr": "0x2011296119",
+                        "bitmask": 32,
+                        "data": 43,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4249,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 281
+                    },
+                    {
+                        "addr": "0x2011296128",
+                        "bitmask": 4,
+                        "data": 199,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4264,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 296
+                    },
+                    {
+                        "addr": "0x20112961aa",
+                        "bitmask": 64,
+                        "data": 152,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4330,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 426
+                    },
+                    {
+                        "addr": "0x201129620d",
+                        "bitmask": 4,
+                        "data": 80,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4365,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 525
+                    },
+                    {
+                        "addr": "0x2011296321",
+                        "bitmask": 128,
+                        "data": 250,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4513,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 801
+                    },
+                    {
+                        "addr": "0x2011296339",
+                        "bitmask": 16,
+                        "data": 143,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4537,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 825
+                    },
+                    {
+                        "addr": "0x201129639f",
+                        "bitmask": 2,
+                        "data": 50,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4575,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 927
+                    },
+                    {
+                        "addr": "0x2011296429",
+                        "bitmask": 4,
+                        "data": 71,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4649,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1065
+                    },
+                    {
+                        "addr": "0x201129662e",
+                        "bitmask": 32,
+                        "data": 62,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4910,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1582
+                    },
+                    {
+                        "addr": "0x20112966a2",
+                        "bitmask": 16,
+                        "data": 195,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4962,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1698
+                    },
+                    {
+                        "addr": "0x2011296708",
+                        "bitmask": 16,
+                        "data": 145,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5000,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1800
+                    },
+                    {
+                        "addr": "0x20112967b9",
+                        "bitmask": 4,
+                        "data": 170,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5113,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1977
+                    },
+                    {
+                        "addr": "0x20112968b9",
+                        "bitmask": 32,
+                        "data": 245,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5241,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2233
+                    },
+                    {
+                        "addr": "0x201129693c",
+                        "bitmask": 1,
+                        "data": 103,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5308,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2364
+                    },
+                    {
+                        "addr": "0x2011296c3c",
+                        "bitmask": 1,
+                        "data": 181,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5692,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3132
+                    },
+                    {
+                        "addr": "0x2011296eb5",
+                        "bitmask": 32,
+                        "data": 25,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6005,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3765
+                    },
+                    {
+                        "addr": "0x2011297016",
+                        "bitmask": 64,
+                        "data": 113,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6166,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 22
+                    },
+                    {
+                        "addr": "0x20112972a1",
+                        "bitmask": 4,
+                        "data": 134,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6497,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 673
+                    },
+                    {
+                        "addr": "0x20112972bd",
+                        "bitmask": 8,
+                        "data": 176,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6525,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 701
+                    },
+                    {
+                        "addr": "0x2011297509",
+                        "bitmask": 32,
+                        "data": 10,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6793,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 1289
+                    },
+                    {
+                        "addr": "0x2011297802",
+                        "bitmask": 16,
+                        "data": 250,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7170,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 2050
+                    },
+                    {
+                        "addr": "0x2011297c8e",
+                        "bitmask": 8,
+                        "data": 160,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7758,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3214
+                    },
+                    {
+                        "addr": "0x2011297da8",
+                        "bitmask": 16,
+                        "data": 126,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7912,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3496
+                    },
+                    {
+                        "addr": "0x2011297ea6",
+                        "bitmask": 64,
+                        "data": 14,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 8038,
+                            "row": 2196
+                        },
+                        "observed_at": 1639478111,
+                        "page_offset": 3750
+                    },
+                    {
+                        "addr": "0x2010c954dd",
+                        "bitmask": 1,
+                        "data": 141,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2653,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 1245
+                    },
+                    {
+                        "addr": "0x2010c95668",
+                        "bitmask": 8,
+                        "data": 116,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2856,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 1640
+                    },
+                    {
+                        "addr": "0x2010c959df",
+                        "bitmask": 16,
+                        "data": 110,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3295,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 2527
+                    },
+                    {
+                        "addr": "0x2010c95cfc",
+                        "bitmask": 1,
+                        "data": 240,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3708,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 3324
+                    },
+                    {
+                        "addr": "0x2010c96188",
+                        "bitmask": 4,
+                        "data": 200,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4296,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 392
+                    },
+                    {
+                        "addr": "0x2010c962a0",
+                        "bitmask": 1,
+                        "data": 18,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4448,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 672
+                    },
+                    {
+                        "addr": "0x2010c97029",
+                        "bitmask": 4,
+                        "data": 240,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6185,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 41
+                    },
+                    {
+                        "addr": "0x2010c97980",
+                        "bitmask": 1,
+                        "data": 86,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7360,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 2432
+                    },
+                    {
+                        "addr": "0x2010c979af",
+                        "bitmask": 32,
+                        "data": 124,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7407,
+                            "row": 2148
+                        },
+                        "observed_at": 1639478112,
+                        "page_offset": 2479
+                    },
+                    {
+                        "addr": "0x20124b0272",
+                        "bitmask": 1,
+                        "data": 119,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 306,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 626
+                    },
+                    {
+                        "addr": "0x20124b076f",
+                        "bitmask": 32,
+                        "data": 75,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 943,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 1903
+                    },
+                    {
+                        "addr": "0x20124b094d",
+                        "bitmask": 16,
+                        "data": 32,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1165,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 2381
+                    },
+                    {
+                        "addr": "0x20124b0e58",
+                        "bitmask": 4,
+                        "data": 210,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1816,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 3672
+                    },
+                    {
+                        "addr": "0x20124b15e8",
+                        "bitmask": 2,
+                        "data": 202,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2792,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 1512
+                    },
+                    {
+                        "addr": "0x20124b1f63",
+                        "bitmask": 8,
+                        "data": 26,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4003,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 3939
+                    },
+                    {
+                        "addr": "0x20124b1fd7",
+                        "bitmask": 16,
+                        "data": 100,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4055,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 4055
+                    },
+                    {
+                        "addr": "0x20124b2896",
+                        "bitmask": 2,
+                        "data": 12,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5206,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 2198
+                    },
+                    {
+                        "addr": "0x20124b2f31",
+                        "bitmask": 16,
+                        "data": 13,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6065,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 3889
+                    },
+                    {
+                        "addr": "0x20124b3e20",
+                        "bitmask": 16,
+                        "data": 233,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7968,
+                            "row": 2341
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 3616
+                    },
+                    {
+                        "addr": "0x2011d6af2a",
+                        "bitmask": 8,
+                        "data": 12,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6058,
+                            "row": 2283
+                        },
+                        "observed_at": 1639478113,
+                        "page_offset": 3882
+                    },
+                    {
+                        "addr": "0x20112b0063",
+                        "bitmask": 32,
+                        "data": 50,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 35,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 99
+                    },
+                    {
+                        "addr": "0x20112b0246",
+                        "bitmask": 4,
+                        "data": 192,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 262,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 582
+                    },
+                    {
+                        "addr": "0x20112b0261",
+                        "bitmask": 128,
+                        "data": 147,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 289,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 609
+                    },
+                    {
+                        "addr": "0x20112b054c",
+                        "bitmask": 8,
+                        "data": 39,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 652,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 1356
+                    },
+                    {
+                        "addr": "0x20112b05c4",
+                        "bitmask": 64,
+                        "data": 49,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 708,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 1476
+                    },
+                    {
+                        "addr": "0x20112b05e1",
+                        "bitmask": 128,
+                        "data": 197,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 737,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 1505
+                    },
+                    {
+                        "addr": "0x20112b0b61",
+                        "bitmask": 128,
+                        "data": 113,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1441,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2913
+                    },
+                    {
+                        "addr": "0x20112b0dc4",
+                        "bitmask": 8,
+                        "data": 125,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1732,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3524
+                    },
+                    {
+                        "addr": "0x20112b0dd6",
+                        "bitmask": 16,
+                        "data": 240,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1750,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3542
+                    },
+                    {
+                        "addr": "0x20112b0e6d",
+                        "bitmask": 4,
+                        "data": 207,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1837,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3693
+                    },
+                    {
+                        "addr": "0x20112b1046",
+                        "bitmask": 2,
+                        "data": 176,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2054,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 70
+                    },
+                    {
+                        "addr": "0x20112b1078",
+                        "bitmask": 16,
+                        "data": 47,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2104,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 120
+                    },
+                    {
+                        "addr": "0x20112b1272",
+                        "bitmask": 4,
+                        "data": 243,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2354,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 626
+                    },
+                    {
+                        "addr": "0x20112b165d",
+                        "bitmask": 16,
+                        "data": 239,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2845,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 1629
+                    },
+                    {
+                        "addr": "0x20112b176a",
+                        "bitmask": 132,
+                        "data": 241,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2986,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 1898
+                    },
+                    {
+                        "addr": "0x20112b17f7",
+                        "bitmask": 2,
+                        "data": 105,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3063,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2039
+                    },
+                    {
+                        "addr": "0x20112b1966",
+                        "bitmask": 8,
+                        "data": 133,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3238,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2406
+                    },
+                    {
+                        "addr": "0x20112b19f0",
+                        "bitmask": 128,
+                        "data": 165,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3312,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2544
+                    },
+                    {
+                        "addr": "0x20112b1a55",
+                        "bitmask": 128,
+                        "data": 230,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3349,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2645
+                    },
+                    {
+                        "addr": "0x20112b1c74",
+                        "bitmask": 1,
+                        "data": 105,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3636,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3188
+                    },
+                    {
+                        "addr": "0x20112b1cce",
+                        "bitmask": 128,
+                        "data": 78,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3662,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3278
+                    },
+                    {
+                        "addr": "0x20112b1d46",
+                        "bitmask": 4,
+                        "data": 159,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3718,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3398
+                    },
+                    {
+                        "addr": "0x20112b1d79",
+                        "bitmask": 16,
+                        "data": 108,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3769,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3449
+                    },
+                    {
+                        "addr": "0x20112b1dce",
+                        "bitmask": 4,
+                        "data": 116,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3790,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3534
+                    },
+                    {
+                        "addr": "0x20112b1e63",
+                        "bitmask": 2,
+                        "data": 105,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3875,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3683
+                    },
+                    {
+                        "addr": "0x20112b1e73",
+                        "bitmask": 32,
+                        "data": 103,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3891,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3699
+                    },
+                    {
+                        "addr": "0x20112b2009",
+                        "bitmask": 4,
+                        "data": 76,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4105,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 9
+                    },
+                    {
+                        "addr": "0x20112b22b8",
+                        "bitmask": 4,
+                        "data": 6,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4472,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 696
+                    },
+                    {
+                        "addr": "0x20112b25a0",
+                        "bitmask": 4,
+                        "data": 16,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4832,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 1440
+                    },
+                    {
+                        "addr": "0x20112b2883",
+                        "bitmask": 32,
+                        "data": 39,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5187,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2179
+                    },
+                    {
+                        "addr": "0x20112b2990",
+                        "bitmask": 64,
+                        "data": 11,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5328,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2448
+                    },
+                    {
+                        "addr": "0x20112b2cb9",
+                        "bitmask": 16,
+                        "data": 183,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5753,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3257
+                    },
+                    {
+                        "addr": "0x20112b2d35",
+                        "bitmask": 32,
+                        "data": 193,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5813,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3381
+                    },
+                    {
+                        "addr": "0x20112b33b1",
+                        "bitmask": 2,
+                        "data": 52,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6641,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 945
+                    },
+                    {
+                        "addr": "0x20112b358b",
+                        "bitmask": 4,
+                        "data": 69,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6859,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 1419
+                    },
+                    {
+                        "addr": "0x20112b3825",
+                        "bitmask": 1,
+                        "data": 201,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7205,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2085
+                    },
+                    {
+                        "addr": "0x20112b3826",
+                        "bitmask": 32,
+                        "data": 210,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7206,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2086
+                    },
+                    {
+                        "addr": "0x20112b3918",
+                        "bitmask": 1,
+                        "data": 53,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7320,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2328
+                    },
+                    {
+                        "addr": "0x20112b3985",
+                        "bitmask": 8,
+                        "data": 8,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7365,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2437
+                    },
+                    {
+                        "addr": "0x20112b3a94",
+                        "bitmask": 64,
+                        "data": 41,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7508,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 2708
+                    },
+                    {
+                        "addr": "0x20112b3e1a",
+                        "bitmask": 8,
+                        "data": 221,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7962,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3610
+                    },
+                    {
+                        "addr": "0x20112b3e8a",
+                        "bitmask": 2,
+                        "data": 22,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 8010,
+                            "row": 2197
+                        },
+                        "observed_at": 1639478114,
+                        "page_offset": 3722
+                    },
+                    {
+                        "addr": "0x2010cb0a59",
+                        "bitmask": 8,
+                        "data": 145,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1305,
+                            "row": 2149
+                        },
+                        "observed_at": 1639478115,
+                        "page_offset": 2649
+                    },
+                    {
+                        "addr": "0x2010cb1454",
+                        "bitmask": 4,
+                        "data": 53,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2580,
+                            "row": 2149
+                        },
+                        "observed_at": 1639478115,
+                        "page_offset": 1108
+                    },
+                    {
+                        "addr": "0x2010cb1566",
+                        "bitmask": 2,
+                        "data": 46,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2726,
+                            "row": 2149
+                        },
+                        "observed_at": 1639478115,
+                        "page_offset": 1382
+                    },
+                    {
+                        "addr": "0x2010cb200a",
+                        "bitmask": 4,
+                        "data": 246,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4106,
+                            "row": 2149
+                        },
+                        "observed_at": 1639478115,
+                        "page_offset": 10
+                    },
+                    {
+                        "addr": "0x2010cb3280",
+                        "bitmask": 1,
+                        "data": 10,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6464,
+                            "row": 2149
+                        },
+                        "observed_at": 1639478115,
+                        "page_offset": 640
+                    },
+                    {
+                        "addr": "0x20124dc1e9",
+                        "bitmask": 32,
+                        "data": 40,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 233,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 489
+                    },
+                    {
+                        "addr": "0x20124dc9d3",
+                        "bitmask": 64,
+                        "data": 102,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1235,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 2515
+                    },
+                    {
+                        "addr": "0x20124dcb7e",
+                        "bitmask": 64,
+                        "data": 112,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1470,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 2942
+                    },
+                    {
+                        "addr": "0x20124dccda",
+                        "bitmask": 2,
+                        "data": 45,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1626,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 3290
+                    },
+                    {
+                        "addr": "0x20124ddac6",
+                        "bitmask": 16,
+                        "data": 8,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3398,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 2758
+                    },
+                    {
+                        "addr": "0x20124ddec6",
+                        "bitmask": 32,
+                        "data": 12,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3910,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 3782
+                    },
+                    {
+                        "addr": "0x20124de696",
+                        "bitmask": 128,
+                        "data": 79,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4950,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 1686
+                    },
+                    {
+                        "addr": "0x20124de905",
+                        "bitmask": 1,
+                        "data": 108,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5253,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 2309
+                    },
+                    {
+                        "addr": "0x20124df1af",
+                        "bitmask": 1,
+                        "data": 70,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6383,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 431
+                    },
+                    {
+                        "addr": "0x20124df32e",
+                        "bitmask": 8,
+                        "data": 196,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6574,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 814
+                    },
+                    {
+                        "addr": "0x20124df528",
+                        "bitmask": 32,
+                        "data": 53,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6824,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 1320
+                    },
+                    {
+                        "addr": "0x20124dfaa2",
+                        "bitmask": 8,
+                        "data": 21,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7522,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 2722
+                    },
+                    {
+                        "addr": "0x20124dfd3c",
+                        "bitmask": 128,
+                        "data": 6,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7868,
+                            "row": 2342
+                        },
+                        "observed_at": 1639478116,
+                        "page_offset": 3388
+                    },
+                    {
+                        "addr": "0x2011d06381",
+                        "bitmask": 1,
+                        "data": 82,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4545,
+                            "row": 2280
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 897
+                    },
+                    {
+                        "addr": "0x2011d07600",
+                        "bitmask": 2,
+                        "data": 14,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6912,
+                            "row": 2280
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1536
+                    },
+                    {
+                        "addr": "0x2011d0763b",
+                        "bitmask": 2,
+                        "data": 61,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6971,
+                            "row": 2280
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1595
+                    },
+                    {
+                        "addr": "0x2011d07b80",
+                        "bitmask": 1,
+                        "data": 236,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7616,
+                            "row": 2280
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2944
+                    },
+                    {
+                        "addr": "0x2011d07e85",
+                        "bitmask": 32,
+                        "data": 221,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 8005,
+                            "row": 2280
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3717
+                    },
+                    {
+                        "addr": "0x20112dc266",
+                        "bitmask": 64,
+                        "data": 156,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 294,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 614
+                    },
+                    {
+                        "addr": "0x20112dca4e",
+                        "bitmask": 8,
+                        "data": 13,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1294,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2638
+                    },
+                    {
+                        "addr": "0x20112dcbca",
+                        "bitmask": 2,
+                        "data": 244,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1482,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3018
+                    },
+                    {
+                        "addr": "0x20112dcfd0",
+                        "bitmask": 16,
+                        "data": 113,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2000,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 4048
+                    },
+                    {
+                        "addr": "0x20112dd06f",
+                        "bitmask": 16,
+                        "data": 124,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2095,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 111
+                    },
+                    {
+                        "addr": "0x20112dd1fa",
+                        "bitmask": 2,
+                        "data": 212,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2298,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 506
+                    },
+                    {
+                        "addr": "0x20112dd2ea",
+                        "bitmask": 16,
+                        "data": 21,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2410,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 746
+                    },
+                    {
+                        "addr": "0x20112dd56f",
+                        "bitmask": 8,
+                        "data": 117,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2735,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1391
+                    },
+                    {
+                        "addr": "0x20112dd878",
+                        "bitmask": 1,
+                        "data": 227,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3128,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2168
+                    },
+                    {
+                        "addr": "0x20112dd8df",
+                        "bitmask": 8,
+                        "data": 39,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3167,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2271
+                    },
+                    {
+                        "addr": "0x20112ddace",
+                        "bitmask": 8,
+                        "data": 235,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3406,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2766
+                    },
+                    {
+                        "addr": "0x20112ddbd9",
+                        "bitmask": 1,
+                        "data": 177,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3545,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3033
+                    },
+                    {
+                        "addr": "0x20112ddc68",
+                        "bitmask": 33,
+                        "data": 196,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3624,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3176
+                    },
+                    {
+                        "addr": "0x20112dddf7",
+                        "bitmask": 64,
+                        "data": 79,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3831,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3575
+                    },
+                    {
+                        "addr": "0x20112dde41",
+                        "bitmask": 2,
+                        "data": 168,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3841,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3649
+                    },
+                    {
+                        "addr": "0x20112ddf7e",
+                        "bitmask": 64,
+                        "data": 123,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4030,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3966
+                    },
+                    {
+                        "addr": "0x20112de19e",
+                        "bitmask": 8,
+                        "data": 53,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4318,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 414
+                    },
+                    {
+                        "addr": "0x20112de594",
+                        "bitmask": 8,
+                        "data": 63,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4820,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1428
+                    },
+                    {
+                        "addr": "0x20112de631",
+                        "bitmask": 32,
+                        "data": 103,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4913,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1585
+                    },
+                    {
+                        "addr": "0x20112de6a2",
+                        "bitmask": 16,
+                        "data": 100,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4962,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1698
+                    },
+                    {
+                        "addr": "0x20112de7b9",
+                        "bitmask": 128,
+                        "data": 242,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5113,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1977
+                    },
+                    {
+                        "addr": "0x20112de824",
+                        "bitmask": 1,
+                        "data": 188,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5156,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2084
+                    },
+                    {
+                        "addr": "0x20112de888",
+                        "bitmask": 8,
+                        "data": 179,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5192,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2184
+                    },
+                    {
+                        "addr": "0x20112de899",
+                        "bitmask": 64,
+                        "data": 255,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5209,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2201
+                    },
+                    {
+                        "addr": "0x20112def01",
+                        "bitmask": 1,
+                        "data": 87,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6017,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3841
+                    },
+                    {
+                        "addr": "0x20112def02",
+                        "bitmask": 1,
+                        "data": 35,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6018,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3842
+                    },
+                    {
+                        "addr": "0x20112df1b7",
+                        "bitmask": 4,
+                        "data": 126,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6391,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 439
+                    },
+                    {
+                        "addr": "0x20112df5ba",
+                        "bitmask": 8,
+                        "data": 59,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6906,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1466
+                    },
+                    {
+                        "addr": "0x20112df605",
+                        "bitmask": 1,
+                        "data": 156,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6917,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1541
+                    },
+                    {
+                        "addr": "0x20112df69b",
+                        "bitmask": 8,
+                        "data": 29,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7003,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1691
+                    },
+                    {
+                        "addr": "0x20112df6ae",
+                        "bitmask": 64,
+                        "data": 218,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7022,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 1710
+                    },
+                    {
+                        "addr": "0x20112df9b7",
+                        "bitmask": 2,
+                        "data": 11,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7415,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2487
+                    },
+                    {
+                        "addr": "0x20112dfaae",
+                        "bitmask": 128,
+                        "data": 172,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7534,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 2734
+                    },
+                    {
+                        "addr": "0x20112dfc28",
+                        "bitmask": 32,
+                        "data": 217,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7720,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3112
+                    },
+                    {
+                        "addr": "0x20112dfcbe",
+                        "bitmask": 128,
+                        "data": 146,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7806,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3262
+                    },
+                    {
+                        "addr": "0x20112dfe00",
+                        "bitmask": 4,
+                        "data": 103,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7936,
+                            "row": 2198
+                        },
+                        "observed_at": 1639478117,
+                        "page_offset": 3584
+                    },
+                    {
+                        "addr": "0x2010cdd7de",
+                        "bitmask": 16,
+                        "data": 206,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3038,
+                            "row": 2150
+                        },
+                        "observed_at": 1639478118,
+                        "page_offset": 2014
+                    },
+                    {
+                        "addr": "0x2010cde909",
+                        "bitmask": 64,
+                        "data": 34,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5257,
+                            "row": 2150
+                        },
+                        "observed_at": 1639478118,
+                        "page_offset": 2313
+                    },
+                    {
+                        "addr": "0x2010cdfd32",
+                        "bitmask": 32,
+                        "data": 45,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7858,
+                            "row": 2150
+                        },
+                        "observed_at": 1639478118,
+                        "page_offset": 3378
+                    },
+                    {
+                        "addr": "0x2011db067f",
+                        "bitmask": 1,
+                        "data": 119,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 831,
+                            "row": 2285
+                        },
+                        "observed_at": 1639478120,
+                        "page_offset": 1663
+                    },
+                    {
+                        "addr": "0x2011db0868",
+                        "bitmask": 2,
+                        "data": 112,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1064,
+                            "row": 2285
+                        },
+                        "observed_at": 1639478120,
+                        "page_offset": 2152
+                    },
+                    {
+                        "addr": "0x2011db2538",
+                        "bitmask": 8,
+                        "data": 62,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4792,
+                            "row": 2285
+                        },
+                        "observed_at": 1639478120,
+                        "page_offset": 1336
+                    },
+                    {
+                        "addr": "0x2011db28ae",
+                        "bitmask": 8,
+                        "data": 151,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5230,
+                            "row": 2285
+                        },
+                        "observed_at": 1639478120,
+                        "page_offset": 2222
+                    },
+                    {
+                        "addr": "0x2011db36af",
+                        "bitmask": 64,
+                        "data": 67,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7023,
+                            "row": 2285
+                        },
+                        "observed_at": 1639478120,
+                        "page_offset": 1711
+                    },
+                    {
+                        "addr": "0x2011db370f",
+                        "bitmask": 8,
+                        "data": 77,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7055,
+                            "row": 2285
+                        },
+                        "observed_at": 1639478120,
+                        "page_offset": 1807
+                    },
+                    {
+                        "addr": "0x2011d4db52",
+                        "bitmask": 32,
+                        "data": 184,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3474,
+                            "row": 2282
+                        },
+                        "observed_at": 1639478123,
+                        "page_offset": 2898
+                    },
+                    {
+                        "addr": "0x201256965f",
+                        "bitmask": 1,
+                        "data": 117,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2847,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478125,
+                        "page_offset": 1631
+                    },
+                    {
+                        "addr": "0x201256976e",
+                        "bitmask": 64,
+                        "data": 80,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2990,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478125,
+                        "page_offset": 1902
+                    },
+                    {
+                        "addr": "0x2012569bc9",
+                        "bitmask": 64,
+                        "data": 3,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3529,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478125,
+                        "page_offset": 3017
+                    },
+                    {
+                        "addr": "0x2012569efd",
+                        "bitmask": 1,
+                        "data": 35,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3965,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478125,
+                        "page_offset": 3837
+                    },
+                    {
+                        "addr": "0x20125686c9",
+                        "bitmask": 4,
+                        "data": 211,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 841,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 1737
+                    },
+                    {
+                        "addr": "0x2012568af9",
+                        "bitmask": 1,
+                        "data": 143,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1401,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 2809
+                    },
+                    {
+                        "addr": "0x2012568f57",
+                        "bitmask": 1,
+                        "data": 29,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1943,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 3927
+                    },
+                    {
+                        "addr": "0x201256a5b2",
+                        "bitmask": 4,
+                        "data": 167,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4850,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 1458
+                    },
+                    {
+                        "addr": "0x201256a80d",
+                        "bitmask": 8,
+                        "data": 105,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5133,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 2061
+                    },
+                    {
+                        "addr": "0x201256ad98",
+                        "bitmask": 128,
+                        "data": 242,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5848,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 3480
+                    },
+                    {
+                        "addr": "0x201256b5a8",
+                        "bitmask": 16,
+                        "data": 43,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6888,
+                            "row": 2347
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 1448
+                    },
+                    {
+                        "addr": "0x2011df9173",
+                        "bitmask": 4,
+                        "data": 41,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2227,
+                            "row": 2287
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 371
+                    },
+                    {
+                        "addr": "0x2011df98de",
+                        "bitmask": 16,
+                        "data": 230,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3166,
+                            "row": 2287
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 2270
+                    },
+                    {
+                        "addr": "0x2011dfb708",
+                        "bitmask": 32,
+                        "data": 87,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7048,
+                            "row": 2287
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 1800
+                    },
+                    {
+                        "addr": "0x2011dfb80d",
+                        "bitmask": 16,
+                        "data": 79,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7181,
+                            "row": 2287
+                        },
+                        "observed_at": 1639478126,
+                        "page_offset": 2061
+                    },
+                    {
+                        "addr": "0x2011368559",
+                        "bitmask": 4,
+                        "data": 174,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 665,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 1369
+                    },
+                    {
+                        "addr": "0x2011368d5e",
+                        "bitmask": 8,
+                        "data": 183,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1694,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 3422
+                    },
+                    {
+                        "addr": "0x2011369165",
+                        "bitmask": 2,
+                        "data": 157,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2213,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 357
+                    },
+                    {
+                        "addr": "0x20113691ec",
+                        "bitmask": 2,
+                        "data": 180,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2284,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 492
+                    },
+                    {
+                        "addr": "0x2011369c48",
+                        "bitmask": 16,
+                        "data": 241,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3592,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 3144
+                    },
+                    {
+                        "addr": "0x2011369cd4",
+                        "bitmask": 8,
+                        "data": 41,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3668,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 3284
+                    },
+                    {
+                        "addr": "0x2011369f7c",
+                        "bitmask": 32,
+                        "data": 171,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4028,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 3964
+                    },
+                    {
+                        "addr": "0x201136a488",
+                        "bitmask": 8,
+                        "data": 126,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4680,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 1160
+                    },
+                    {
+                        "addr": "0x201136a718",
+                        "bitmask": 2,
+                        "data": 197,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5016,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 1816
+                    },
+                    {
+                        "addr": "0x201136a935",
+                        "bitmask": 4,
+                        "data": 58,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5301,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 2357
+                    },
+                    {
+                        "addr": "0x201136ad0f",
+                        "bitmask": 4,
+                        "data": 53,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5775,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 3343
+                    },
+                    {
+                        "addr": "0x201136af2d",
+                        "bitmask": 2,
+                        "data": 7,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6061,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 3885
+                    },
+                    {
+                        "addr": "0x201136b88c",
+                        "bitmask": 128,
+                        "data": 113,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7244,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 2188
+                    },
+                    {
+                        "addr": "0x201136bd35",
+                        "bitmask": 128,
+                        "data": 121,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7861,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 3381
+                    },
+                    {
+                        "addr": "0x201136bea5",
+                        "bitmask": 32,
+                        "data": 28,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 8037,
+                            "row": 2203
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 3749
+                    },
+                    {
+                        "addr": "0x2010d698de",
+                        "bitmask": 16,
+                        "data": 74,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3166,
+                            "row": 2155
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 2270
+                    },
+                    {
+                        "addr": "0x2010d69ace",
+                        "bitmask": 128,
+                        "data": 64,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3406,
+                            "row": 2155
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 2766
+                    },
+                    {
+                        "addr": "0x2010d6a398",
+                        "bitmask": 1,
+                        "data": 138,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4568,
+                            "row": 2155
+                        },
+                        "observed_at": 1639478127,
+                        "page_offset": 920
+                    },
+                    {
+                        "addr": "0x20125050f2",
+                        "bitmask": 128,
+                        "data": 158,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2162,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478128,
+                        "page_offset": 242
+                    },
+                    {
+                        "addr": "0x20125051fc",
+                        "bitmask": 2,
+                        "data": 40,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2300,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478128,
+                        "page_offset": 508
+                    },
+                    {
+                        "addr": "0x20125055ef",
+                        "bitmask": 8,
+                        "data": 127,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2799,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478128,
+                        "page_offset": 1519
+                    },
+                    {
+                        "addr": "0x201250566c",
+                        "bitmask": 32,
+                        "data": 94,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2860,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478128,
+                        "page_offset": 1644
+                    },
+                    {
+                        "addr": "0x2012505772",
+                        "bitmask": 8,
+                        "data": 48,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2994,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478128,
+                        "page_offset": 1906
+                    },
+                    {
+                        "addr": "0x2012505af9",
+                        "bitmask": 8,
+                        "data": 55,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3449,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478128,
+                        "page_offset": 2809
+                    },
+                    {
+                        "addr": "0x2012504357",
+                        "bitmask": 64,
+                        "data": 121,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 407,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 855
+                    },
+                    {
+                        "addr": "0x2012504df4",
+                        "bitmask": 128,
+                        "data": 11,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1780,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 3572
+                    },
+                    {
+                        "addr": "0x201250680e",
+                        "bitmask": 16,
+                        "data": 190,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5134,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 2062
+                    },
+                    {
+                        "addr": "0x2012506ab9",
+                        "bitmask": 2,
+                        "data": 97,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5497,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 2745
+                    },
+                    {
+                        "addr": "0x2012506f14",
+                        "bitmask": 1,
+                        "data": 8,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6036,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 3860
+                    },
+                    {
+                        "addr": "0x20125078aa",
+                        "bitmask": 8,
+                        "data": 222,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7274,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 2218
+                    },
+                    {
+                        "addr": "0x2012507b18",
+                        "bitmask": 128,
+                        "data": 16,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7576,
+                            "row": 2344
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 2840
+                    },
+                    {
+                        "addr": "0x2011d95e43",
+                        "bitmask": 4,
+                        "data": 11,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3843,
+                            "row": 2284
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 3651
+                    },
+                    {
+                        "addr": "0x2011d96a32",
+                        "bitmask": 16,
+                        "data": 135,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5426,
+                            "row": 2284
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 2610
+                    },
+                    {
+                        "addr": "0x2011d96ebb",
+                        "bitmask": 16,
+                        "data": 45,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6011,
+                            "row": 2284
+                        },
+                        "observed_at": 1639478129,
+                        "page_offset": 3771
+                    },
+                    {
+                        "addr": "0x2011304246",
+                        "bitmask": 4,
+                        "data": 216,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 262,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 582
+                    },
+                    {
+                        "addr": "0x201130494f",
+                        "bitmask": 1,
+                        "data": 42,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1167,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 2383
+                    },
+                    {
+                        "addr": "0x2011304cfc",
+                        "bitmask": 32,
+                        "data": 181,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 1660,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 3324
+                    },
+                    {
+                        "addr": "0x20113050f9",
+                        "bitmask": 64,
+                        "data": 138,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2169,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 249
+                    },
+                    {
+                        "addr": "0x2011305559",
+                        "bitmask": 2,
+                        "data": 59,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 2713,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 1369
+                    },
+                    {
+                        "addr": "0x20113058d4",
+                        "bitmask": 1,
+                        "data": 193,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3156,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 2260
+                    },
+                    {
+                        "addr": "0x2011305d42",
+                        "bitmask": 32,
+                        "data": 36,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3714,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 3394
+                    },
+                    {
+                        "addr": "0x20113060b0",
+                        "bitmask": 4,
+                        "data": 133,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4208,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 176
+                    },
+                    {
+                        "addr": "0x201130610a",
+                        "bitmask": 8,
+                        "data": 174,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4234,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 266
+                    },
+                    {
+                        "addr": "0x20113062ac",
+                        "bitmask": 1,
+                        "data": 135,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4460,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 684
+                    },
+                    {
+                        "addr": "0x2011306604",
+                        "bitmask": 1,
+                        "data": 129,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 4868,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 1540
+                    },
+                    {
+                        "addr": "0x201130670d",
+                        "bitmask": 4,
+                        "data": 83,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5005,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 1805
+                    },
+                    {
+                        "addr": "0x2011306a93",
+                        "bitmask": 8,
+                        "data": 55,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5459,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 2707
+                    },
+                    {
+                        "addr": "0x2011306ab2",
+                        "bitmask": 8,
+                        "data": 167,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5490,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 2738
+                    },
+                    {
+                        "addr": "0x2011306b8b",
+                        "bitmask": 16,
+                        "data": 4,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 5579,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 2955
+                    },
+                    {
+                        "addr": "0x20113077a8",
+                        "bitmask": 32,
+                        "data": 231,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7144,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 1960
+                    },
+                    {
+                        "addr": "0x2011307983",
+                        "bitmask": 2,
+                        "data": 92,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7363,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 2435
+                    },
+                    {
+                        "addr": "0x2011307c3b",
+                        "bitmask": 32,
+                        "data": 80,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7739,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 3131
+                    },
+                    {
+                        "addr": "0x2011307e19",
+                        "bitmask": 16,
+                        "data": 209,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7961,
+                            "row": 2200
+                        },
+                        "observed_at": 1639478130,
+                        "page_offset": 3609
+                    },
+                    {
+                        "addr": "0x2010d05df6",
+                        "bitmask": 1,
+                        "data": 206,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 3830,
+                            "row": 2152
+                        },
+                        "observed_at": 1639478131,
+                        "page_offset": 3574
+                    },
+                    {
+                        "addr": "0x2010d075be",
+                        "bitmask": 4,
+                        "data": 81,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 6910,
+                            "row": 2152
+                        },
+                        "observed_at": 1639478131,
+                        "page_offset": 1470
+                    },
+                    {
+                        "addr": "0x2010d07b15",
+                        "bitmask": 64,
+                        "data": 205,
+                        "dram_addr": {
+                            "bank": 12,
+                            "col": 7573,
+                            "row": 2152
+                        },
+                        "observed_at": 1639478131,
+                        "page_offset": 2837
+                    }
+                ],
+                "one_to_zero": 158,
+                "total": 317,
+                "zero_to_one": 159
+            },
+            "mapping": "c5af98b8-4f3a-4e60-a2d8-9bb4a8109f3a",
+            "pattern": "1001dab2-bb47-407a-bf3c-a2e8345f4134"
+        }
+    ]
+}

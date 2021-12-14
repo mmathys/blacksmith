@@ -1,0 +1,1611 @@
+{
+    "metadata": {
+        "dimm_id": 1,
+        "end": 1639480147,
+        "memory_config": {
+            "banks": 16,
+            "channels": 1,
+            "dimms": 1,
+            "ranks": 1
+        },
+        "num_patterns": 1,
+        "start": 1639480124
+    },
+    "sweeps": [
+        {
+            "flips": {
+                "details": [
+                    {
+                        "addr": "0x2022cb4289",
+                        "bitmask": 64,
+                        "data": 25,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 329,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 649
+                    },
+                    {
+                        "addr": "0x2022cb49a7",
+                        "bitmask": 4,
+                        "data": 93,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1255,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 2471
+                    },
+                    {
+                        "addr": "0x2022cb4a1f",
+                        "bitmask": 4,
+                        "data": 1,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1311,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 2591
+                    },
+                    {
+                        "addr": "0x2022cb4c1f",
+                        "bitmask": 2,
+                        "data": 107,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1567,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 3103
+                    },
+                    {
+                        "addr": "0x2022cb4c99",
+                        "bitmask": 1,
+                        "data": 45,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1625,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 3225
+                    },
+                    {
+                        "addr": "0x2022cb518b",
+                        "bitmask": 32,
+                        "data": 104,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2251,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 395
+                    },
+                    {
+                        "addr": "0x2022cb539c",
+                        "bitmask": 2,
+                        "data": 53,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2524,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 924
+                    },
+                    {
+                        "addr": "0x2022cb5689",
+                        "bitmask": 128,
+                        "data": 135,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2889,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 1673
+                    },
+                    {
+                        "addr": "0x2022cb5b2d",
+                        "bitmask": 32,
+                        "data": 187,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3501,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 2861
+                    },
+                    {
+                        "addr": "0x2022cb5ebe",
+                        "bitmask": 32,
+                        "data": 14,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3966,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 3774
+                    },
+                    {
+                        "addr": "0x2022cb644c",
+                        "bitmask": 16,
+                        "data": 228,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4620,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 1100
+                    },
+                    {
+                        "addr": "0x2022cb695c",
+                        "bitmask": 16,
+                        "data": 80,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5276,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 2396
+                    },
+                    {
+                        "addr": "0x2022cb6e78",
+                        "bitmask": 1,
+                        "data": 118,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5944,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 3704
+                    },
+                    {
+                        "addr": "0x2022cb7044",
+                        "bitmask": 16,
+                        "data": 5,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6148,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 68
+                    },
+                    {
+                        "addr": "0x2022cb7048",
+                        "bitmask": 4,
+                        "data": 137,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6152,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 72
+                    },
+                    {
+                        "addr": "0x2022cb71e0",
+                        "bitmask": 1,
+                        "data": 32,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6368,
+                            "row": 4453
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 480
+                    },
+                    {
+                        "addr": "0x2006f92a41",
+                        "bitmask": 8,
+                        "data": 96,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5377,
+                            "row": 892
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 2625
+                    },
+                    {
+                        "addr": "0x2006f93776",
+                        "bitmask": 32,
+                        "data": 2,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7094,
+                            "row": 892
+                        },
+                        "observed_at": 1639480125,
+                        "page_offset": 1910
+                    },
+                    {
+                        "addr": "0x2022cd8033",
+                        "bitmask": 64,
+                        "data": 82,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 51,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 51
+                    },
+                    {
+                        "addr": "0x2022cd8714",
+                        "bitmask": 64,
+                        "data": 206,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 916,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 1812
+                    },
+                    {
+                        "addr": "0x2022cd87a0",
+                        "bitmask": 1,
+                        "data": 224,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 992,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 1952
+                    },
+                    {
+                        "addr": "0x2022cd8b07",
+                        "bitmask": 32,
+                        "data": 115,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1415,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 2823
+                    },
+                    {
+                        "addr": "0x2022cd8f32",
+                        "bitmask": 4,
+                        "data": 234,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1970,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 3890
+                    },
+                    {
+                        "addr": "0x2022cd9122",
+                        "bitmask": 16,
+                        "data": 156,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2210,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 290
+                    },
+                    {
+                        "addr": "0x2022cd92b5",
+                        "bitmask": 4,
+                        "data": 228,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2421,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 693
+                    },
+                    {
+                        "addr": "0x2022cd930f",
+                        "bitmask": 32,
+                        "data": 58,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2447,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 783
+                    },
+                    {
+                        "addr": "0x2022cd9885",
+                        "bitmask": 1,
+                        "data": 203,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3141,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480126,
+                        "page_offset": 2181
+                    },
+                    {
+                        "addr": "0x2022cda265",
+                        "bitmask": 2,
+                        "data": 1,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4389,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480127,
+                        "page_offset": 613
+                    },
+                    {
+                        "addr": "0x2022cda5ff",
+                        "bitmask": 2,
+                        "data": 89,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4863,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480127,
+                        "page_offset": 1535
+                    },
+                    {
+                        "addr": "0x2022cda855",
+                        "bitmask": 2,
+                        "data": 251,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5141,
+                            "row": 4454
+                        },
+                        "observed_at": 1639480127,
+                        "page_offset": 2133
+                    },
+                    {
+                        "addr": "0x20070245be",
+                        "bitmask": 8,
+                        "data": 34,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 766,
+                            "row": 897
+                        },
+                        "observed_at": 1639480141,
+                        "page_offset": 1470
+                    },
+                    {
+                        "addr": "0x20070276f6",
+                        "bitmask": 1,
+                        "data": 27,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7030,
+                            "row": 897
+                        },
+                        "observed_at": 1639480141,
+                        "page_offset": 1782
+                    },
+                    {
+                        "addr": "0x2022d6c18b",
+                        "bitmask": 16,
+                        "data": 102,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 203,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 395
+                    },
+                    {
+                        "addr": "0x2022d6c28e",
+                        "bitmask": 4,
+                        "data": 29,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 334,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 654
+                    },
+                    {
+                        "addr": "0x2022d6c5a9",
+                        "bitmask": 2,
+                        "data": 40,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 745,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 1449
+                    },
+                    {
+                        "addr": "0x2022d6cd39",
+                        "bitmask": 64,
+                        "data": 5,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1721,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3385
+                    },
+                    {
+                        "addr": "0x2022d6cdbd",
+                        "bitmask": 8,
+                        "data": 5,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1789,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3517
+                    },
+                    {
+                        "addr": "0x2022d6ce2f",
+                        "bitmask": 2,
+                        "data": 12,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1839,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3631
+                    },
+                    {
+                        "addr": "0x2022d6ce3f",
+                        "bitmask": 2,
+                        "data": 112,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1855,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3647
+                    },
+                    {
+                        "addr": "0x2022d6d01d",
+                        "bitmask": 128,
+                        "data": 32,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2077,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 29
+                    },
+                    {
+                        "addr": "0x2022d6d09e",
+                        "bitmask": 4,
+                        "data": 146,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2142,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 158
+                    },
+                    {
+                        "addr": "0x2022d6d0ad",
+                        "bitmask": 8,
+                        "data": 210,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2157,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 173
+                    },
+                    {
+                        "addr": "0x2022d6d62d",
+                        "bitmask": 32,
+                        "data": 234,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2861,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 1581
+                    },
+                    {
+                        "addr": "0x2022d6d71e",
+                        "bitmask": 2,
+                        "data": 100,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2974,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 1822
+                    },
+                    {
+                        "addr": "0x2022d6d78d",
+                        "bitmask": 8,
+                        "data": 157,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3021,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 1933
+                    },
+                    {
+                        "addr": "0x2022d6da88",
+                        "bitmask": 16,
+                        "data": 123,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3400,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 2696
+                    },
+                    {
+                        "addr": "0x2022d6dc0b",
+                        "bitmask": 8,
+                        "data": 45,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3595,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3083
+                    },
+                    {
+                        "addr": "0x2022d6de27",
+                        "bitmask": 64,
+                        "data": 86,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3879,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3623
+                    },
+                    {
+                        "addr": "0x2022d6df38",
+                        "bitmask": 1,
+                        "data": 47,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4024,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3896
+                    },
+                    {
+                        "addr": "0x2022d6e0f8",
+                        "bitmask": 64,
+                        "data": 121,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4216,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 248
+                    },
+                    {
+                        "addr": "0x2022d6e568",
+                        "bitmask": 2,
+                        "data": 215,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4776,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 1384
+                    },
+                    {
+                        "addr": "0x2022d6e67b",
+                        "bitmask": 32,
+                        "data": 102,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4923,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 1659
+                    },
+                    {
+                        "addr": "0x2022d6e87f",
+                        "bitmask": 1,
+                        "data": 17,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5183,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 2175
+                    },
+                    {
+                        "addr": "0x2022d6ec7f",
+                        "bitmask": 36,
+                        "data": 105,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5695,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3199
+                    },
+                    {
+                        "addr": "0x2022d6ee5a",
+                        "bitmask": 64,
+                        "data": 69,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5914,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3674
+                    },
+                    {
+                        "addr": "0x2022d6f0ce",
+                        "bitmask": 1,
+                        "data": 254,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6222,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 206
+                    },
+                    {
+                        "addr": "0x2022d6f0dd",
+                        "bitmask": 128,
+                        "data": 170,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6237,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 221
+                    },
+                    {
+                        "addr": "0x2022d6f1eb",
+                        "bitmask": 32,
+                        "data": 120,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6379,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 491
+                    },
+                    {
+                        "addr": "0x2022d6f24a",
+                        "bitmask": 2,
+                        "data": 208,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6410,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 586
+                    },
+                    {
+                        "addr": "0x2022d6f2e2",
+                        "bitmask": 2,
+                        "data": 214,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6498,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 738
+                    },
+                    {
+                        "addr": "0x2022d6f779",
+                        "bitmask": 128,
+                        "data": 242,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7097,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 1913
+                    },
+                    {
+                        "addr": "0x2022d6f8f0",
+                        "bitmask": 2,
+                        "data": 168,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7280,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 2288
+                    },
+                    {
+                        "addr": "0x2022d6fafe",
+                        "bitmask": 2,
+                        "data": 90,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7550,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 2814
+                    },
+                    {
+                        "addr": "0x2022d6fb6a",
+                        "bitmask": 1,
+                        "data": 133,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7594,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 2922
+                    },
+                    {
+                        "addr": "0x2022d6fece",
+                        "bitmask": 8,
+                        "data": 17,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 8014,
+                            "row": 4459
+                        },
+                        "observed_at": 1639480142,
+                        "page_offset": 3790
+                    },
+                    {
+                        "addr": "0x2022d00137",
+                        "bitmask": 16,
+                        "data": 78,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 183,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 311
+                    },
+                    {
+                        "addr": "0x2022d00502",
+                        "bitmask": 1,
+                        "data": 70,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 642,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 1282
+                    },
+                    {
+                        "addr": "0x2022d00801",
+                        "bitmask": 2,
+                        "data": 172,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1025,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 2049
+                    },
+                    {
+                        "addr": "0x2022d00e23",
+                        "bitmask": 2,
+                        "data": 63,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1827,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 3619
+                    },
+                    {
+                        "addr": "0x2022d011b2",
+                        "bitmask": 4,
+                        "data": 212,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2290,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 434
+                    },
+                    {
+                        "addr": "0x2022d01a35",
+                        "bitmask": 16,
+                        "data": 129,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3381,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 2613
+                    },
+                    {
+                        "addr": "0x2022d01e21",
+                        "bitmask": 32,
+                        "data": 33,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3873,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 3617
+                    },
+                    {
+                        "addr": "0x2022d02042",
+                        "bitmask": 8,
+                        "data": 134,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4098,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 66
+                    },
+                    {
+                        "addr": "0x2022d02044",
+                        "bitmask": 2,
+                        "data": 154,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4100,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 68
+                    },
+                    {
+                        "addr": "0x2022d02049",
+                        "bitmask": 128,
+                        "data": 190,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4105,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 73
+                    },
+                    {
+                        "addr": "0x2022d029e5",
+                        "bitmask": 64,
+                        "data": 194,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5349,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 2533
+                    },
+                    {
+                        "addr": "0x2022d02b70",
+                        "bitmask": 16,
+                        "data": 149,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5552,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 2928
+                    },
+                    {
+                        "addr": "0x2022d02df1",
+                        "bitmask": 8,
+                        "data": 23,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5873,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 3569
+                    },
+                    {
+                        "addr": "0x2022d034c1",
+                        "bitmask": 8,
+                        "data": 68,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6721,
+                            "row": 4456
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 1217
+                    },
+                    {
+                        "addr": "0x200706d68e",
+                        "bitmask": 4,
+                        "data": 170,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2894,
+                            "row": 899
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 1678
+                    },
+                    {
+                        "addr": "0x200706eec1",
+                        "bitmask": 4,
+                        "data": 2,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5953,
+                            "row": 899
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 3777
+                    },
+                    {
+                        "addr": "0x200706f5fb",
+                        "bitmask": 64,
+                        "data": 33,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6907,
+                            "row": 899
+                        },
+                        "observed_at": 1639480144,
+                        "page_offset": 1531
+                    },
+                    {
+                        "addr": "0x2022db439e",
+                        "bitmask": 4,
+                        "data": 114,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 478,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 926
+                    },
+                    {
+                        "addr": "0x2022db4427",
+                        "bitmask": 16,
+                        "data": 104,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 551,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 1063
+                    },
+                    {
+                        "addr": "0x2022db4509",
+                        "bitmask": 64,
+                        "data": 71,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 649,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 1289
+                    },
+                    {
+                        "addr": "0x2022db4703",
+                        "bitmask": 64,
+                        "data": 69,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 899,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 1795
+                    },
+                    {
+                        "addr": "0x2022db47a6",
+                        "bitmask": 16,
+                        "data": 147,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 998,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 1958
+                    },
+                    {
+                        "addr": "0x2022db4a96",
+                        "bitmask": 2,
+                        "data": 145,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1366,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 2710
+                    },
+                    {
+                        "addr": "0x2022db4d05",
+                        "bitmask": 64,
+                        "data": 159,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1669,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 3333
+                    },
+                    {
+                        "addr": "0x2022db583c",
+                        "bitmask": 8,
+                        "data": 73,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3132,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 2108
+                    },
+                    {
+                        "addr": "0x2022db5916",
+                        "bitmask": 1,
+                        "data": 47,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3222,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 2326
+                    },
+                    {
+                        "addr": "0x2022db5927",
+                        "bitmask": 8,
+                        "data": 69,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3239,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 2343
+                    },
+                    {
+                        "addr": "0x2022db5a86",
+                        "bitmask": 16,
+                        "data": 173,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3398,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 2694
+                    },
+                    {
+                        "addr": "0x2022db5f0f",
+                        "bitmask": 16,
+                        "data": 48,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3983,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 3855
+                    },
+                    {
+                        "addr": "0x2022db61e0",
+                        "bitmask": 128,
+                        "data": 4,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4320,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 480
+                    },
+                    {
+                        "addr": "0x2022db6477",
+                        "bitmask": 1,
+                        "data": 86,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4663,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 1143
+                    },
+                    {
+                        "addr": "0x2022db64d8",
+                        "bitmask": 8,
+                        "data": 243,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4696,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 1240
+                    },
+                    {
+                        "addr": "0x2022db66d1",
+                        "bitmask": 8,
+                        "data": 130,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4945,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 1745
+                    },
+                    {
+                        "addr": "0x2022db6a49",
+                        "bitmask": 8,
+                        "data": 243,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5385,
+                            "row": 4461
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 2633
+                    },
+                    {
+                        "addr": "0x20070900b1",
+                        "bitmask": 4,
+                        "data": 249,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 113,
+                            "row": 900
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 177
+                    },
+                    {
+                        "addr": "0x20070926ca",
+                        "bitmask": 64,
+                        "data": 5,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4938,
+                            "row": 900
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 1738
+                    },
+                    {
+                        "addr": "0x200706c98b",
+                        "bitmask": 1,
+                        "data": 10,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1227,
+                            "row": 899
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 2443
+                    },
+                    {
+                        "addr": "0x2007091e80",
+                        "bitmask": 1,
+                        "data": 4,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3904,
+                            "row": 900
+                        },
+                        "observed_at": 1639480145,
+                        "page_offset": 3712
+                    },
+                    {
+                        "addr": "0x2022d48310",
+                        "bitmask": 1,
+                        "data": 202,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 400,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 784
+                    },
+                    {
+                        "addr": "0x2022d48484",
+                        "bitmask": 16,
+                        "data": 64,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 580,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 1156
+                    },
+                    {
+                        "addr": "0x2022d48485",
+                        "bitmask": 4,
+                        "data": 154,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 581,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 1157
+                    },
+                    {
+                        "addr": "0x2022d48a1a",
+                        "bitmask": 4,
+                        "data": 195,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1306,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 2586
+                    },
+                    {
+                        "addr": "0x2022d48ba0",
+                        "bitmask": 128,
+                        "data": 99,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1504,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 2976
+                    },
+                    {
+                        "addr": "0x2022d48d22",
+                        "bitmask": 64,
+                        "data": 114,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1698,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 3362
+                    },
+                    {
+                        "addr": "0x2022d48d91",
+                        "bitmask": 2,
+                        "data": 173,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1745,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 3473
+                    },
+                    {
+                        "addr": "0x2022d48f86",
+                        "bitmask": 128,
+                        "data": 126,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 1990,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 3974
+                    },
+                    {
+                        "addr": "0x2022d49025",
+                        "bitmask": 2,
+                        "data": 219,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2085,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 37
+                    },
+                    {
+                        "addr": "0x2022d49685",
+                        "bitmask": 2,
+                        "data": 231,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 2885,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 1669
+                    },
+                    {
+                        "addr": "0x2022d49791",
+                        "bitmask": 16,
+                        "data": 192,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3025,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 1937
+                    },
+                    {
+                        "addr": "0x2022d49b8b",
+                        "bitmask": 32,
+                        "data": 60,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3531,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 2955
+                    },
+                    {
+                        "addr": "0x2022d49d04",
+                        "bitmask": 1,
+                        "data": 197,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3716,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 3332
+                    },
+                    {
+                        "addr": "0x2022d49d21",
+                        "bitmask": 8,
+                        "data": 170,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 3745,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 3361
+                    },
+                    {
+                        "addr": "0x2022d4a072",
+                        "bitmask": 2,
+                        "data": 27,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4146,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 114
+                    },
+                    {
+                        "addr": "0x2022d4a0d4",
+                        "bitmask": 32,
+                        "data": 182,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4180,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 212
+                    },
+                    {
+                        "addr": "0x2022d4a471",
+                        "bitmask": 32,
+                        "data": 50,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 4657,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 1137
+                    },
+                    {
+                        "addr": "0x2022d4a857",
+                        "bitmask": 4,
+                        "data": 21,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5143,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 2135
+                    },
+                    {
+                        "addr": "0x2022d4ab48",
+                        "bitmask": 2,
+                        "data": 28,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 5512,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 2888
+                    },
+                    {
+                        "addr": "0x2022d4aef3",
+                        "bitmask": 16,
+                        "data": 75,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6003,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 3827
+                    },
+                    {
+                        "addr": "0x2022d4b160",
+                        "bitmask": 4,
+                        "data": 254,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6304,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 352
+                    },
+                    {
+                        "addr": "0x2022d4b176",
+                        "bitmask": 2,
+                        "data": 235,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6326,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 374
+                    },
+                    {
+                        "addr": "0x2022d4b2df",
+                        "bitmask": 1,
+                        "data": 103,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6495,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 735
+                    },
+                    {
+                        "addr": "0x2022d4b655",
+                        "bitmask": 2,
+                        "data": 201,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6933,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 1621
+                    },
+                    {
+                        "addr": "0x2022d4b760",
+                        "bitmask": 4,
+                        "data": 244,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7072,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 1888
+                    },
+                    {
+                        "addr": "0x2022d4b9c6",
+                        "bitmask": 128,
+                        "data": 163,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7366,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 2502
+                    },
+                    {
+                        "addr": "0x2022d4b9d1",
+                        "bitmask": 2,
+                        "data": 16,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 7377,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 2513
+                    },
+                    {
+                        "addr": "0x2022d4bec4",
+                        "bitmask": 2,
+                        "data": 133,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 8004,
+                            "row": 4458
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 3780
+                    },
+                    {
+                        "addr": "0x20070b74fa",
+                        "bitmask": 1,
+                        "data": 122,
+                        "dram_addr": {
+                            "bank": 0,
+                            "col": 6778,
+                            "row": 901
+                        },
+                        "observed_at": 1639480146,
+                        "page_offset": 1274
+                    }
+                ],
+                "one_to_zero": 70,
+                "total": 133,
+                "zero_to_one": 63
+            },
+            "mapping": "f481cdca-3642-41da-a74c-dfee9b550864",
+            "pattern": "cfe6c142-4ffd-487b-9b66-9b30bcf372e3"
+        }
+    ]
+}
