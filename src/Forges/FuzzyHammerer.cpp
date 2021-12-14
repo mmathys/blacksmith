@@ -157,7 +157,7 @@ void FuzzyHammerer::n_sided_frequency_based_hammering(DramAnalyzer &dramAnalyzer
       Range<int>(0, 4095).get_random_number(gen),
       0);
 
-  size_t SWEEP_MEM_SIZE_BEST_PATTERN = 2*1024*1024; // in bytes
+  size_t SWEEP_MEM_SIZE_BEST_PATTERN = 1*1024*1024; // in bytes
   Logger::log_info(format_string("Doing a sweep of %d MB to determine most effective pattern.",
       SWEEP_MEM_SIZE_BEST_PATTERN));
 
@@ -174,7 +174,7 @@ void FuzzyHammerer::n_sided_frequency_based_hammering(DramAnalyzer &dramAnalyzer
       mapping.remap_aggressors(sweep_start);
 
       // do the minisweep
-      SweepSummary summary = replaying_hammerer.sweep_pattern(patt, mapping, 10, SWEEP_MEM_SIZE_BEST_PATTERN, {});
+      SweepSummary summary = replaying_hammerer.sweep_pattern(patt, mapping, 2, SWEEP_MEM_SIZE_BEST_PATTERN, {});
 
       PatternMappingStat pms;
       pms.pattern_id = patt.instance_id;
@@ -231,7 +231,7 @@ void FuzzyHammerer::n_sided_frequency_based_hammering(DramAnalyzer &dramAnalyzer
     // do sweep with 1x256MB of memory
     replaying_hammerer.set_params(fuzzing_params);
     num_bitflips_sweep = replaying_hammerer.replay_patterns_brief({*best_pattern_for_sweep},
-        MB(256), 1, true);
+        MB(1), 1, true);
 
     // if the sweep was not successful, we take the next best pattern and repeat
     if (num_bitflips_sweep > 0)
