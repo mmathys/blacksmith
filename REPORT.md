@@ -31,6 +31,19 @@ In our opinion, he hardest parts were:
 
 ## Week 8
 
+Fixes for last week:
+- Fixed the number of ACTs that fit into a refresh interval
+  - Fixed an issue where not all aggressor rows were flushed
+  - Fixed the ACTs measurement scaling according to the e-mail
+- Implemented a working SIMD implementation with CodeJitter!
+
+This week, we fixed some issues from week 7 and benchmarked our code (see `benchmarks/`). We first modified the bitflip checking logic to check for multiple banks as well in `Memory.cpp`. We submit two variants.
+
+1. SIMD variant (on GitHub)
+2. Scalar access variant (this submission)
+
+In the SIMD variant, we succeeded in implementing a parallel version of Blacksmith. Before each hammer, we set the take the aggressor row a, then add an offset of 1, 2, 3 banks. This results in four aggressor rows a, a', a'', a'''. Please see the relevant code snippet here:
+
 TODO: save aggressors into AVX (sixteen YMM) -> sixteen aggressor rows
 
 TODO
