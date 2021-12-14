@@ -42,22 +42,45 @@ This week, we fixed some issues from week 7 and benchmarked our code (see `bench
 1. SIMD variant (on GitHub)
 2. Scalar access variant (this submission)
 
-In the SIMD variant, we succeeded in implementing a parallel version of Blacksmith. Before each hammer, we set the take the aggressor row a, then add an offset of 1, 2, 3 banks. This results in four aggressor rows a, a', a'', a'''. Please see the relevant code snippet here:
+In the **SIMD variant**, we succeeded in implementing a parallel version of Blacksmith. Before each hammer, we set the take the aggressor row a, then add an offset of 1, 2, 3 banks. This results in four aggressor rows a, a', a'', a'''. See the assembly part here:
+- https://github.com/mmathys/blacksmith/blob/submission-simd/src/Fuzzer/CodeJitter.cpp#L197-L213
+Unfortunately, this version does not really trigger bitflips – we were only able to see one single bitflip with this version.
+
+We tried out a different version with **scalar accesses**, which is this submission. See lines L198-L205 in `CodeJitter.cpp`. This version send scalar accesses to rows a..a'''. This yielded much better results, see the next section.
+
+### Benchmarks of Week 8
+
+We benchmarked the scalar access variant on nodes cn002, cn005, cn006. We tried other nodes as well but the fuzzer didn't threw an error or got stuck.
+
+We show the results of a sweep over 1MB of DRAM (instead of a plot we list the following table):
+
+Node   | Code   | Total bitflips of sweep
+=========================================
+cn006    1-way    133
+cn006    4-way    317
+cn002    4-way    2
+cn005    4-way    0
+
+On node 6, we tested both the original Blacksmith code ("1-way") and the scalar access variant ("4-way"). On nodes 2 and 5 we only tested the scalar access variant ("4-way").
+
+We conclude that hammering multiple rows with the scalar access variant is actually beneficial to finding more bitflips in a given time span! 
+
+## TODO
 
 TODO: save aggressors into AVX (sixteen YMM) -> sixteen aggressor rows
 
 TODO
-- [x] find out how to execute the SIMD gather instruction with AsmJit
-- [x] modify fuzzer so that it runs faster
-  - [x] limit short fuzzer to only one pattern (?)
-- [ ] update report
-  - [ ] run benchmarks again with fixed code
-  - [ ] add testing of i32 stuff
-- [ ] find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern (for 4x parallelization)
-  - [ ] save fuzzer run (do not pass sweep)
-  - [ ] use --load-json and --sweeping
-- [ ] do this on DRAM 2, 3, 6.
-- [ ] benchmark different levels of parallelization on node 6 (fuzzer + sweep in one go)
-- [ ] prepare report
-  - [ ] explain why vgather didn't work out as well as simple pipelined accesses.
-- [ ] prepare short presentation
+- find out how to execute the SIMD gather instruction with AsmJit
+- modify fuzzer so that it runs faster
+  - limit short fuzzer to only one pattern (?)
+- update report
+  - run benchmarks again with fixed code
+  - add testing of i32 stuff
+- find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern (for 4x parallelization)
+  - save fuzzer run (do not pass sweep)
+  - use --load-json and --sweeping
+- do this on DRAM 2, 3, 6.
+- benchmark different levels of parallelization on node 6 (fuzzer + sweep in one go)
+- prepare report
+  - explain why vgather didn't work out as well as simple pipelined accesses.
+- prepare short presentation
