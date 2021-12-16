@@ -139,7 +139,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
   std::cout << testAddr.bank << std::endl;
   DRAMAddr testAddr2((void*) a[1]);
   std::cout << testAddr2.bank << std::endl;
-
+  
   std::sort(a.begin(), a.end());
   std::sort(b.begin(), b.end());
 
@@ -148,8 +148,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
   uint64_t before, after, count = 0, count_old = 0;
   __m256 x;
   __m256 y;
-  __m256d xd;
-  __m256d yd;
+  __m256 xd;
+  __m256 yd;
   volatile double x1;
   volatile double y1;
 
@@ -178,24 +178,24 @@ size_t DramAnalyzer::count_acts_per_ref() {
     before = rdtscp();
     lfence();
 
-    //(void)*a;
-    //(void)*b;
+    //*(volatile char*)a[0];
+    //*(volatile char*)b[0];
 
-    //x = _mm256_load_ps((const float *)a);
-    //y = _mm256_load_ps((const float *)b);
+    //x = _mm256_loadu_ps((const float *)a[0]);
+    //y = _mm256_loadu_ps((const float *)b[0]);
     
-    xd = _mm256_i64gather_pd((const float*)a[0], idx_a, 1);
-    yd = _mm256_i64gather_pd((const float*)b[0], idx_b, 1);
+    xd = _mm256_i32gather_ps((float const*)a[0], idx_a, 1);
+    yd = _mm256_i32gather_ps((float const*)b[0], idx_b, 1);
     
     after = rdtscp();
     mfence();
     // write result to volatile variable so that compiler doesn't optimize away.
     x1 = x[0];
     y1 = y[0];
-    double store_a[4] = {0, 0, 0, 0};
-    double store_b[4] = {0, 0, 0, 0};
-    _mm256_storeu_pd(store_a, xd);
-    _mm256_storeu_pd(store_b, yd);
+    float store_a[4] = {0, 0, 0, 0};
+    float store_b[4] = {0, 0, 0, 0};
+    _mm256_storeu_ps(store_a, xd);
+    _mm256_storeu_ps(store_b, yd);
     x1 = store_a[0];
     y1 = store_b[0];
 
@@ -216,7 +216,7 @@ size_t DramAnalyzer::count_acts_per_ref() {
   Logger::log_info("Determined the number of possible ACTs per refresh interval.");
   Logger::log_data(format_string("num_acts_per_tREFI: %lu", activations));
 
-  //exit(0);
+  exit(0);
 
   return activations;
 }
