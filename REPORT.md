@@ -30,13 +30,29 @@ In our opinion, he hardest parts were:
 
 ## Week 8
 
-Fixes for last week:
-- Fixed the number of ACTs that fit into a refresh interval
-  - Fixed an issue where not all aggressor rows were flushed
-  - Fixed the ACTs measurement scaling according to the e-mail
-- Implemented a working SIMD implementation with CodeJitter!
+> 3 pts: Run the SIMD Blacksmith on three DIMMs
+  We benchmarked our SIMD implementation in `CodeJitter` on cn006, cn002 and cn005 and got the following results.
+  The 4-way indicates that we hammered 4 banks in parallel.
 
-This week, we fixed some issues from week 7 and benchmarked our code (see `benchmarks/`). We first modified the bitflip checking logic to check for multiple banks as well in `Memory.cpp`. We submit two variants.
+Node   | Code   | Total bitflips of sweep
+=========================================
+cn006    1-way    133
+cn006    4-way    317
+cn002    4-way    2
+cn005    4-way    0
+
+> Fixes from last week
+  We now correctly counted the ACTs and counted the double of `count` per refresh interval. As one can see
+  in the above results we now get much more realistic number of activations. Especially for the 8 banks
+  in parallel version we have. In a further step we now collect addresses into a, a', ..., a''' and
+  sort them in ascending order, because the addresses are from random banks.
+  Then we switched the intrinsic functions from `_mm256_i[32|64]gather_epi32` to `_mm256_i[32|64]gather_ps`. With the
+  i32gather instruction we were able to hammer 8 banks in parallel and reach a high number of ACTs as can be seen above.
+  Also we fixed our flushing and accesses to always loop through all elements in the vector, with 4 and also 8 elements.
+  In the SIMD part in `CodeJitter` we found that using the `vpinsrq` instruction leads to bitflips instead of using the 
+  `mov` instruction for filling the vector registers.
+  Additionally this week, we fixed some issues from week 7 and benchmarked our code (see `benchmarks/`). We first modified 
+  the bitflip checking logic to check for multiple banks as well in `Memory.cpp`. We submit two variants.
 
 1. SIMD variant (on GitHub)
 2. Scalar access variant (this submission)
@@ -44,6 +60,16 @@ This week, we fixed some issues from week 7 and benchmarked our code (see `bench
 In the **SIMD variant**, we succeeded in implementing a parallel version of Blacksmith. Before each hammer, we set the take the aggressor row a, then add an offset of 1, 2, 3 banks. This results in four aggressor rows a, a', a'', a'''. See the assembly part here:
 - https://github.com/mmathys/blacksmith/blob/submission-simd/src/Fuzzer/CodeJitter.cpp#L197-L213
 Unfortunately, this version does not really trigger bitflips – we were only able to see one single bitflip with this version.
+We conclude that our SIMD implementation in Assembly is probably slow because the `mov` and `vpinsrq` instructions are quite slow
+and blocking, thus we loose a lot of speed and fast accesses there. In our version they have to be done on each access.
+Storing the offsets bottlenecks our parrallel execution.
+
+> Future Work
+  As we have seen the ACTs for 8 banks parallel hammering are very promising. We struggled a lot with the translation of
+  the intrinsics functions to assembly code. We expect with more time and knowledge the ACTs benefit could be moved to the
+  `CodeJitter` and hammering can be done much more efficiently.
+  As a next step we know that we have 32 registers, only two of them are needed for the mask and the result, thus we could
+  run 30 aggressors for even more parallel hammering.
 
 We tried out a different version with **scalar accesses**, which is this submission. See lines L198-L205 in `CodeJitter.cpp`. This version send scalar accesses to rows a..a'''. This yielded much better results, see the next section.
 
@@ -63,23 +89,3 @@ cn005    4-way    0
 On node 6, we tested both the original Blacksmith code ("1-way") and the scalar access variant ("4-way"). On nodes 2 and 5 we only tested the scalar access variant ("4-way").
 
 We conclude that hammering multiple rows with the scalar access variant is actually beneficial to finding more bitflips in a given time span! 
-
-## TODO
-
-TODO: save aggressors into AVX (sixteen YMM) -> sixteen aggressor rows
-
-TODO
-- find out how to execute the SIMD gather instruction with AsmJit
-- modify fuzzer so that it runs faster
-  - limit short fuzzer to only one pattern (?)
-- update report
-  - run benchmarks again with fixed code
-  - add testing of i32 stuff
-- find out how to benchmark execution: fuzzer saves the best pattern (?); benchmark this pattern (for 4x parallelization)
-  - save fuzzer run (do not pass sweep)
-  - use --load-json and --sweeping
-- do this on DRAM 2, 3, 6.
-- benchmark different levels of parallelization on node 6 (fuzzer + sweep in one go)
-- prepare report
-  - explain why vgather didn't work out as well as simple pipelined accesses.
-- prepare short presentation
