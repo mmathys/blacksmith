@@ -6,11 +6,11 @@ This week, we researched hammering with SIMD using Blacksmith. We first tried ha
 
 > 3 pts: Figure out how many ACTs fit into an refresh interval using SIMD instructions
 
-- simple `(void)*a;`: 396 ACTs      (1 bank)
-- `_mm256_load_ps`: 388 ACTs        (1 bank)
-- `_mm256_loadu_ps`: 392 ACTs       (1 bank)
+- simple `(void)*a;`: 198 ACTs      (1 bank)
+- `_mm256_load_ps`: 194 ACTs        (1 bank)
+- `_mm256_loadu_ps`: 196 ACTs       (1 bank)
 - `_mm256_i64gather_ps`: 175*4 ACTs   (4 banks in parallel)
-- `_mm256_i32gather_ps`: 177*4 ACTS   (8 banks in parallel)
+- `_mm256_i32gather_ps`: 137*4 ACTS   (8 banks in parallel)
 
 
 Even though the gather instructions are slower, the throughput is much higher. We will investigate whether this will lead to a greater amount of bitflips overall.

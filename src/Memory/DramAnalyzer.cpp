@@ -119,12 +119,14 @@ void DramAnalyzer::load_known_functions(int num_ranks) {
 size_t DramAnalyzer::count_acts_per_ref() {
   size_t skip_first_N = 50;
 
+  const size_t vec_size = 8;
+
   std::vector<uint64_t> a;
   std::vector<uint64_t> b;
   a.push_back((uint64_t) banks.at(0).at(0)); // bank 0, col 0
   b.push_back((uint64_t) banks.at(0).at(1)); // bank 0, col 1
   
-  for(int i = 1; i < 4; i++) {
+  for(int i = 1; i < vec_size; i++) {
     DRAMAddr prev_a((void*) a[i - 1]);
     DRAMAddr prev_b((void*) b[i - 1]);
 
@@ -164,13 +166,13 @@ size_t DramAnalyzer::count_acts_per_ref() {
     return val;
   };
 
-  __m256i idx_a = _mm256_set_epi64x(a[3] - a[0], a[2] - a[0], a[1] - a[0], 0);
-  __m256i idx_b = _mm256_set_epi64x(b[3] - b[0], b[2] - b[0], b[1] - b[0], 0);
+  __m256i idx_a = _mm256_set_epi32(a[7]-a[0],a[6]-a[0],a[5] - a[0],a[4] - a[0],a[3] - a[0], a[2] - a[0], a[1] - a[0], 0);
+  __m256i idx_b = _mm256_set_epi32(b[7]-b[0],b[6]-b[0],b[5] - b[0],b[4] - b[0],b[3] - b[0], b[2] - b[0], b[1] - b[0], 0);
 
   Logger::log_info("sarting act test");
 
   for (size_t i = 0;; i++) {
-    for(int j = 0; j < 4; j++) {
+    for(int j = 0; j < vec_size; j++) {
       clflushopt((volatile char*) a[j]);
       clflushopt((volatile char*) b[j]);
     }
@@ -192,8 +194,8 @@ size_t DramAnalyzer::count_acts_per_ref() {
     // write result to volatile variable so that compiler doesn't optimize away.
     x1 = x[0];
     y1 = y[0];
-    float store_a[4] = {0, 0, 0, 0};
-    float store_b[4] = {0, 0, 0, 0};
+    float store_a[vec_size] = {0, 0, 0, 0, 0, 0, 0, 0};
+    float store_b[vec_size] = {0, 0, 0, 0, 0, 0, 0, 0};
     _mm256_storeu_ps(store_a, xd);
     _mm256_storeu_ps(store_b, yd);
     x1 = store_a[0];
